@@ -1,0 +1,255 @@
+run,type,module,name,attrname,attrvalue,value
+SCRLE-0-20200622-20:03:57-2611,runattr,,,configname,SCRLE,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,datetime,20200622-20:03:57,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,experiment,SCRLE,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,inifile,omnetpp.ini,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,iterationvars,,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,iterationvarsf,,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,measurement,,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,network,ned.Network,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,processid,2611,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,repetition,0,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,replication,#0,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,resultdir,results,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,runnumber,0,
+SCRLE-0-20200622-20:03:57-2611,runattr,,,seedset,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,**.**.applType,"""SCRLE""",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.speed,22mps,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.plist_Interval,0.5s,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.beacon_Interval,1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.message_Lost,0.05,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.playgroundSizeX,25000m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.playgroundSizeY,25000m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.playgroundSizeZ,50m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.annotations.draw,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.obstacles.obstacles,"xmldoc(""sumo/config.xml"", ""//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.updateInterval,1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.host,"""localhost""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.port,9999,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.moduleType,"""ned.VNode""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.moduleName,"""V""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.moduleDisplayString,"""""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.autoShutdown,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.margin,25,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.launchConfig,"xmldoc(""sumo/erlangen.launchd.xml"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.connectionManager.sendDirect,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.connectionManager.maxInterfDist,2600m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.connectionManager.drawMaxIntfDist,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.mac1609_4.useServiceChannel,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.mac1609_4.txPower,20mW,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.mac1609_4.bitrate,6Mbps,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.minPowerLevel,-110dBm,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.useNoiseFloor,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.noiseFloor,-98dBm,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.decider,"xmldoc(""sumo/config.xml"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.analogueModels,"xmldoc(""sumo/config.xml"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.usePropagationDelay,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.antenna,"xmldoc(""sumo/antenna.xml"", ""/root/Antenna[@id='monopole']"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.numCA,1,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.numRSU,1,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.numV,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,**.applType,"""VAppl""",
+SCRLE-0-20200622-20:03:57-2611,param,,,**.appl.headerLength,18400 bit,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.InitialWait,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.CRLsize,1000,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.EnableShuffle,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.NoSegments,20,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.Pseudonym_lifeTime,120s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.beacon_Interval,1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.CRL_Interval,20s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.I2V_tho,0s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.I2V_EnableMultiChannel,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.speed,22mps,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.beacon_Interval,4s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_tho,0s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_Wait_Beacon,0.03s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_EnableMultiChannel,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_Wait_CRL,0.1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.MagicCarsRatio,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.MagicReqTime,"intuniform(0,60)",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.CRLrecons,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.CompromisedEnable,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.CompromisedMsgSendTime,0s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[0].mobility.x,1100,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[0].mobility.y,50,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[0].mobility.z,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[0].mobility.x,2000,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[1].mobility.x,860,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[2].mobility.x,1360,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[3].mobility.x,1860,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].mobility.y,2000,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].mobility.z,3,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.x,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.y,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.z,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.setHostSpeed,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,**.**.applType,"""SCRLE""",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.speed,22mps,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.plist_Interval,0.5s,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.beacon_Interval,1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].appl.message_Lost,0.05,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.playgroundSizeX,25000m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.playgroundSizeY,25000m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.playgroundSizeZ,50m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.annotations.draw,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.obstacles.obstacles,"xmldoc(""sumo/config.xml"", ""//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.updateInterval,1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.host,"""localhost""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.port,9999,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.moduleType,"""ned.VNode""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.moduleName,"""V""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.moduleDisplayString,"""""",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.autoShutdown,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.margin,25,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.manager.launchConfig,"xmldoc(""sumo/erlangen.launchd.xml"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.connectionManager.sendDirect,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.connectionManager.maxInterfDist,2600m,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.connectionManager.drawMaxIntfDist,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.mac1609_4.useServiceChannel,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.mac1609_4.txPower,20mW,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.mac1609_4.bitrate,6Mbps,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.minPowerLevel,-110dBm,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.useNoiseFloor,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.noiseFloor,-98dBm,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.decider,"xmldoc(""sumo/config.xml"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.analogueModels,"xmldoc(""sumo/config.xml"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.usePropagationDelay,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.**.nic.phy80211p.antenna,"xmldoc(""sumo/antenna.xml"", ""/root/Antenna[@id='monopole']"")",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.numCA,1,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.numRSU,1,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.numV,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,**.applType,"""VAppl""",
+SCRLE-0-20200622-20:03:57-2611,param,,,**.appl.headerLength,18400 bit,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.InitialWait,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.CRLsize,1000,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.EnableShuffle,true,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.NoSegments,20,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[*].appl.Pseudonym_lifeTime,120s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.beacon_Interval,1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.CRL_Interval,20s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.I2V_tho,0s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].appl.I2V_EnableMultiChannel,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.speed,22mps,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.beacon_Interval,4s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_tho,0s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_Wait_Beacon,0.03s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_EnableMultiChannel,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.V2V_Wait_CRL,0.1s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.MagicCarsRatio,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.MagicReqTime,"intuniform(0,60)",
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.CRLrecons,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.CompromisedEnable,false,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.V[*].appl.CompromisedMsgSendTime,0s,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[0].mobility.x,1100,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[0].mobility.y,50,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.CA[0].mobility.z,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[0].mobility.x,2000,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[1].mobility.x,860,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[2].mobility.x,1360,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[3].mobility.x,1860,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].mobility.y,2000,
+SCRLE-0-20200622-20:03:57-2611,param,,,Network.RSU[*].mobility.z,3,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.x,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.y,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.z,0,
+SCRLE-0-20200622-20:03:57-2611,param,,,*.V[*].veinsmobility.setHostSpeed,false,
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[98].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[73].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[74].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[76].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[99].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[78].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[79].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[80].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[81].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[82].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[83].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[84].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[85].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[87].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[97].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[96].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[95].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[94].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[93].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[91].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[90].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[89].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[88].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[86].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[92].appl,Full CRL Recieved Time,,,0
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[1].appl,Full CRL Recieved Time,,,68.506415966961
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[2].appl,Full CRL Recieved Time,,,68.506416089002
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[3].appl,Full CRL Recieved Time,,,68.506416215333
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[4].appl,Full CRL Recieved Time,,,68.506416427429
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[7].appl,Full CRL Recieved Time,,,68.687216731168
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[16].appl,Full CRL Recieved Time,,,68.996268665303
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[18].appl,Full CRL Recieved Time,,,69.967752233962
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[26].appl,Full CRL Recieved Time,,,80.5130992815
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[10].appl,Full CRL Recieved Time,,,88.477667961084
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[12].appl,Full CRL Recieved Time,,,88.477668183831
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[9].appl,Full CRL Recieved Time,,,88.490416900159
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[0].appl,Full CRL Recieved Time,,,88.493612901361
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[8].appl,Full CRL Recieved Time,,,88.499994839557
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[5].appl,Full CRL Recieved Time,,,88.506375272484
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[6].appl,Full CRL Recieved Time,,,88.506375399077
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[11].appl,Full CRL Recieved Time,,,88.506376056564
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[14].appl,Full CRL Recieved Time,,,108.50639620476
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[22].appl,Full CRL Recieved Time,,,128.45214947933
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[19].appl,Full CRL Recieved Time,,,128.49072531773
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[13].appl,Full CRL Recieved Time,,,128.50376459046
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[15].appl,Full CRL Recieved Time,,,128.50697458112
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[17].appl,Full CRL Recieved Time,,,128.50697514574
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[20].appl,Full CRL Recieved Time,,,128.50697532857
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[21].appl,Full CRL Recieved Time,,,148.45216034492
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[25].appl,Full CRL Recieved Time,,,148.47793435044
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[29].appl,Full CRL Recieved Time,,,148.47793469785
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[28].appl,Full CRL Recieved Time,,,148.48110557497
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[24].appl,Full CRL Recieved Time,,,148.50682747887
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[27].appl,Full CRL Recieved Time,,,148.50682766697
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[23].appl,Full CRL Recieved Time,,,168.45211991331
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[35].appl,Full CRL Recieved Time,,,168.47793578559
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[34].appl,Full CRL Recieved Time,,,168.48114566646
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[30].appl,Full CRL Recieved Time,,,168.50030118045
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[31].appl,Full CRL Recieved Time,,,168.50348528945
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[36].appl,Full CRL Recieved Time,,,168.50665690355
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[37].appl,Full CRL Recieved Time,,,168.50665710718
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[38].appl,Full CRL Recieved Time,,,168.50665720934
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[32].appl,Full CRL Recieved Time,,,188.45215017821
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[44].appl,Full CRL Recieved Time,,,188.45854528665
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[39].appl,Full CRL Recieved Time,,,188.47797891281
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[43].appl,Full CRL Recieved Time,,,188.481163389
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[33].appl,Full CRL Recieved Time,,,188.50348937545
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[41].appl,Full CRL Recieved Time,,,188.50693855781
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[51].appl,Full CRL Recieved Time,,,208.45860536618
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[48].appl,Full CRL Recieved Time,,,208.47831926223
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[50].appl,Full CRL Recieved Time,,,208.47831938358
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[46].appl,Full CRL Recieved Time,,,208.48788383174
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[40].appl,Full CRL Recieved Time,,,208.50701323272
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[42].appl,Full CRL Recieved Time,,,208.50701333628
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[47].appl,Full CRL Recieved Time,,,208.50701420159
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[45].appl,Full CRL Recieved Time,,,228.45213478152
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[49].appl,Full CRL Recieved Time,,,228.47474208628
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[52].appl,Full CRL Recieved Time,,,228.51011225138
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[54].appl,Full CRL Recieved Time,,,248.4585617995
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[63].appl,Full CRL Recieved Time,,,248.458562817
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[60].appl,Full CRL Recieved Time,,,248.46177263735
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[64].appl,Full CRL Recieved Time,,,248.46177291962
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[53].appl,Full CRL Recieved Time,,,248.47133681201
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[58].appl,Full CRL Recieved Time,,,248.48758505916
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[59].appl,Full CRL Recieved Time,,,248.48758511873
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[61].appl,Full CRL Recieved Time,,,248.48758523738
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[62].appl,Full CRL Recieved Time,,,248.48758529726
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[65].appl,Full CRL Recieved Time,,,248.4875856012
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[55].appl,Full CRL Recieved Time,,,248.50356938965
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[56].appl,Full CRL Recieved Time,,,248.5067799359
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[57].appl,Full CRL Recieved Time,,,268.45859598656
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[68].appl,Full CRL Recieved Time,,,268.46176778303
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[66].appl,Full CRL Recieved Time,,,268.48731762954
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[67].appl,Full CRL Recieved Time,,,268.48731769204
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[70].appl,Full CRL Recieved Time,,,268.48731801817
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[69].appl,Full CRL Recieved Time,,,288.45244424583
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[71].appl,Full CRL Recieved Time,,,288.45564149129
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[72].appl,Full CRL Recieved Time,,,288.45564156561
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[75].appl,Full CRL Recieved Time,,,288.46203597599
+SCRLE-0-20200622-20:03:57-2611,scalar,Network.V[77].appl,Full CRL Recieved Time,,,288.46203621546

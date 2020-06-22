@@ -1,0 +1,2617 @@
+version 2
+run C2CEpidemic-0-20200623-01:17:33-6027
+attr configname C2CEpidemic
+attr datetime 20200623-01:17:33
+attr experiment C2CEpidemic
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ned.Network
+attr processid 6027
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.**.applType "\"C2C_Epidemic\""
+param .V[*].appl.speed 22mps
+param *.V[*].appl.plist_Interval 0.5s
+param *.V[*].appl.beacon_Interval 1s
+param *.V[*].appl.message_Lost 0
+param *.playgroundSizeX 25000m
+param *.playgroundSizeY 25000m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.obstacles.obstacles "xmldoc(\"sumo/config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param Network.manager.updateInterval 1s
+param Network.manager.host "\"localhost\""
+param Network.manager.port 9999
+param Network.manager.moduleType "\"ned.VNode\""
+param Network.manager.moduleName "\"V\""
+param Network.manager.moduleDisplayString "\"\""
+param Network.manager.autoShutdown true
+param Network.manager.margin 25
+param Network.manager.launchConfig "xmldoc(\"sumo/erlangen.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"sumo/config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"sumo/config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"sumo/antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param Network.numCA 1
+param Network.numRSU 1
+param Network.numV 0
+param **.applType "\"VAppl\""
+param **.appl.headerLength "18400 bit"
+param Network.CA[*].appl.InitialWait 0
+param Network.CA[*].appl.CRLsize 1000
+param Network.CA[*].appl.EnableShuffle true
+param Network.CA[*].appl.NoSegments 20
+param Network.CA[*].appl.Pseudonym_lifeTime 120s
+param Network.RSU[*].appl.beacon_Interval 1s
+param Network.RSU[*].appl.CRL_Interval 20s
+param Network.RSU[*].appl.I2V_tho 0s
+param Network.RSU[*].appl.I2V_EnableMultiChannel false
+param Network.V[*].appl.speed 22mps
+param Network.V[*].appl.beacon_Interval 4s
+param Network.V[*].appl.V2V_tho 0s
+param Network.V[*].appl.V2V_Wait_Beacon 0.03s
+param Network.V[*].appl.V2V_EnableMultiChannel false
+param Network.V[*].appl.V2V_Wait_CRL 0.1s
+param Network.V[*].appl.MagicCarsRatio 0
+param Network.V[*].appl.MagicReqTime intuniform(0,60)
+param Network.V[*].appl.CRLrecons false
+param Network.V[*].appl.CompromisedEnable false
+param Network.V[*].appl.CompromisedMsgSendTime 0s
+param Network.CA[0].mobility.x 1100
+param Network.CA[0].mobility.y 50
+param Network.CA[0].mobility.z 0
+param Network.RSU[0].mobility.x 2000
+param Network.RSU[1].mobility.x 860
+param Network.RSU[2].mobility.x 1360
+param Network.RSU[3].mobility.x 1860
+param Network.RSU[*].mobility.y 2000
+param Network.RSU[*].mobility.z 3
+param *.V[*].veinsmobility.x 0
+param *.V[*].veinsmobility.y 0
+param *.V[*].veinsmobility.z 0
+param *.V[*].veinsmobility.setHostSpeed false
+
+scalar Network.V[0].appl "Duplicate Messages" 0
+scalar Network.V[0].appl "Original Messages" 20
+scalar Network.V[0].appl "Plist Message" 211
+scalar Network.V[0].appl "Full CRL Recieved Time" 68.509634494954
+scalar Network.V[0].nic.phy80211p busyTime 0.13572209523814
+scalar Network.V[0].nic.mac1609_4 ReceivedUnicastPackets 211
+scalar Network.V[0].nic.mac1609_4 ReceivedBroadcasts 2321
+scalar Network.V[0].nic.mac1609_4 SentPackets 561
+scalar Network.V[0].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[0].nic.mac1609_4 SNIRLostPackets 6464
+scalar Network.V[0].nic.mac1609_4 RXTXLostPackets 28
+scalar Network.V[0].nic.mac1609_4 TotalLostPackets 6492
+scalar Network.V[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[0].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[0].nic.mac1609_4 TimesIntoBackoff 615
+scalar Network.V[0].nic.mac1609_4 SlotsBackoff 927
+scalar Network.V[0].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[0].nic.mac1609_4 totalBusyTime 34.193665
+scalar Network.V[0].veinsmobility startTime 1
+scalar Network.V[0].veinsmobility totalTime 251
+scalar Network.V[0].veinsmobility stopTime 253
+scalar Network.V[0].veinsmobility minSpeed 4.1061966058897
+scalar Network.V[0].veinsmobility maxSpeed 13.999815066161
+scalar Network.V[0].veinsmobility totalDistance 3398.3983560101
+scalar Network.V[0].veinsmobility totalCO2Emission 569.2819316364
+scalar Network.V[1].appl "Duplicate Messages" 13
+scalar Network.V[1].appl "Original Messages" 20
+scalar Network.V[1].appl "Plist Message" 111
+scalar Network.V[1].appl "Full CRL Recieved Time" 88.490374340348
+scalar Network.V[1].nic.phy80211p busyTime 0.14162457142862
+scalar Network.V[1].nic.mac1609_4 ReceivedUnicastPackets 110
+scalar Network.V[1].nic.mac1609_4 ReceivedBroadcasts 2582
+scalar Network.V[1].nic.mac1609_4 SentPackets 763
+scalar Network.V[1].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[1].nic.mac1609_4 SNIRLostPackets 6513
+scalar Network.V[1].nic.mac1609_4 RXTXLostPackets 19
+scalar Network.V[1].nic.mac1609_4 TotalLostPackets 6532
+scalar Network.V[1].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[1].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[1].nic.mac1609_4 TimesIntoBackoff 797
+scalar Network.V[1].nic.mac1609_4 SlotsBackoff 1150
+scalar Network.V[1].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[1].nic.mac1609_4 totalBusyTime 36.180683
+scalar Network.V[1].veinsmobility startTime 4
+scalar Network.V[1].veinsmobility totalTime 251
+scalar Network.V[1].veinsmobility stopTime 256
+scalar Network.V[1].veinsmobility minSpeed 4.0332649588119
+scalar Network.V[1].veinsmobility maxSpeed 13.99953793895
+scalar Network.V[1].veinsmobility totalDistance 3395.2521572909
+scalar Network.V[1].veinsmobility totalCO2Emission 559.88617340763
+scalar Network.V[2].appl "Duplicate Messages" 13
+scalar Network.V[2].appl "Original Messages" 20
+scalar Network.V[2].appl "Plist Message" 113
+scalar Network.V[2].appl "Full CRL Recieved Time" 88.490374398748
+scalar Network.V[2].nic.phy80211p busyTime 0.14605422222228
+scalar Network.V[2].nic.mac1609_4 ReceivedUnicastPackets 113
+scalar Network.V[2].nic.mac1609_4 ReceivedBroadcasts 2768
+scalar Network.V[2].nic.mac1609_4 SentPackets 729
+scalar Network.V[2].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[2].nic.mac1609_4 SNIRLostPackets 6403
+scalar Network.V[2].nic.mac1609_4 RXTXLostPackets 7
+scalar Network.V[2].nic.mac1609_4 TotalLostPackets 6410
+scalar Network.V[2].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[2].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[2].nic.mac1609_4 TimesIntoBackoff 774
+scalar Network.V[2].nic.mac1609_4 SlotsBackoff 1113
+scalar Network.V[2].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[2].nic.mac1609_4 totalBusyTime 37.140545
+scalar Network.V[2].veinsmobility startTime 7
+scalar Network.V[2].veinsmobility totalTime 251
+scalar Network.V[2].veinsmobility stopTime 259
+scalar Network.V[2].veinsmobility minSpeed 3.930963162637
+scalar Network.V[2].veinsmobility maxSpeed 13.999956833255
+scalar Network.V[2].veinsmobility totalDistance 3396.6418378074
+scalar Network.V[2].veinsmobility totalCO2Emission 560.47776315999
+scalar Network.V[3].appl "Duplicate Messages" 14
+scalar Network.V[3].appl "Original Messages" 20
+scalar Network.V[3].appl "Plist Message" 96
+scalar Network.V[3].appl "Full CRL Recieved Time" 88.499926507711
+scalar Network.V[3].nic.phy80211p busyTime 0.15115501587308
+scalar Network.V[3].nic.mac1609_4 ReceivedUnicastPackets 96
+scalar Network.V[3].nic.mac1609_4 ReceivedBroadcasts 3014
+scalar Network.V[3].nic.mac1609_4 SentPackets 712
+scalar Network.V[3].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[3].nic.mac1609_4 SNIRLostPackets 6360
+scalar Network.V[3].nic.mac1609_4 RXTXLostPackets 74
+scalar Network.V[3].nic.mac1609_4 TotalLostPackets 6434
+scalar Network.V[3].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[3].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[3].nic.mac1609_4 TimesIntoBackoff 731
+scalar Network.V[3].nic.mac1609_4 SlotsBackoff 1036
+scalar Network.V[3].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[3].nic.mac1609_4 totalBusyTime 38.39628
+scalar Network.V[3].veinsmobility startTime 10
+scalar Network.V[3].veinsmobility totalTime 251
+scalar Network.V[3].veinsmobility stopTime 262
+scalar Network.V[3].veinsmobility minSpeed 4.0076977833542
+scalar Network.V[3].veinsmobility maxSpeed 13.999869057706
+scalar Network.V[3].veinsmobility totalDistance 3396.8379006329
+scalar Network.V[3].veinsmobility totalCO2Emission 563.70815367544
+scalar Network.V[4].appl "Duplicate Messages" 13
+scalar Network.V[4].appl "Original Messages" 20
+scalar Network.V[4].appl "Plist Message" 94
+scalar Network.V[4].appl "Full CRL Recieved Time" 88.499926686288
+scalar Network.V[4].nic.phy80211p busyTime 0.15811358139542
+scalar Network.V[4].nic.mac1609_4 ReceivedUnicastPackets 94
+scalar Network.V[4].nic.mac1609_4 ReceivedBroadcasts 3318
+scalar Network.V[4].nic.mac1609_4 SentPackets 443
+scalar Network.V[4].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[4].nic.mac1609_4 SNIRLostPackets 6400
+scalar Network.V[4].nic.mac1609_4 RXTXLostPackets 63
+scalar Network.V[4].nic.mac1609_4 TotalLostPackets 6463
+scalar Network.V[4].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[4].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[4].nic.mac1609_4 TimesIntoBackoff 550
+scalar Network.V[4].nic.mac1609_4 SlotsBackoff 815
+scalar Network.V[4].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[4].nic.mac1609_4 totalBusyTime 40.13232300026
+scalar Network.V[4].veinsmobility startTime 13
+scalar Network.V[4].veinsmobility totalTime 257
+scalar Network.V[4].veinsmobility stopTime 271
+scalar Network.V[4].veinsmobility minSpeed 4.1202440707026
+scalar Network.V[4].veinsmobility maxSpeed 13.999806407762
+scalar Network.V[4].veinsmobility totalDistance 3395.027339265
+scalar Network.V[4].veinsmobility totalCO2Emission 562.99043882825
+scalar Network.V[5].appl "Duplicate Messages" 12
+scalar Network.V[5].appl "Original Messages" 20
+scalar Network.V[5].appl "Plist Message" 70
+scalar Network.V[5].appl "Full CRL Recieved Time" 88.499926750218
+scalar Network.V[5].nic.phy80211p busyTime 0.15919881712069
+scalar Network.V[5].nic.mac1609_4 ReceivedUnicastPackets 70
+scalar Network.V[5].nic.mac1609_4 ReceivedBroadcasts 3353
+scalar Network.V[5].nic.mac1609_4 SentPackets 611
+scalar Network.V[5].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[5].nic.mac1609_4 SNIRLostPackets 6612
+scalar Network.V[5].nic.mac1609_4 RXTXLostPackets 39
+scalar Network.V[5].nic.mac1609_4 TotalLostPackets 6651
+scalar Network.V[5].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[5].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[5].nic.mac1609_4 TimesIntoBackoff 632
+scalar Network.V[5].nic.mac1609_4 SlotsBackoff 905
+scalar Network.V[5].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[5].nic.mac1609_4 totalBusyTime 40.737331
+scalar Network.V[5].veinsmobility startTime 16
+scalar Network.V[5].veinsmobility totalTime 256
+scalar Network.V[5].veinsmobility stopTime 273
+scalar Network.V[5].veinsmobility minSpeed 4.11254450365
+scalar Network.V[5].veinsmobility maxSpeed 13.998108282317
+scalar Network.V[5].veinsmobility totalDistance 3397.8848373625
+scalar Network.V[5].veinsmobility totalCO2Emission 564.84977961516
+scalar Network.V[6].appl "Duplicate Messages" 16
+scalar Network.V[6].appl "Original Messages" 20
+scalar Network.V[6].appl "Plist Message" 395
+scalar Network.V[6].appl "Full CRL Recieved Time" 108.49676401124
+scalar Network.V[6].nic.phy80211p busyTime 0.15000259375006
+scalar Network.V[6].nic.mac1609_4 ReceivedUnicastPackets 395
+scalar Network.V[6].nic.mac1609_4 ReceivedBroadcasts 3451
+scalar Network.V[6].nic.mac1609_4 SentPackets 1662
+scalar Network.V[6].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[6].nic.mac1609_4 SNIRLostPackets 6867
+scalar Network.V[6].nic.mac1609_4 RXTXLostPackets 100
+scalar Network.V[6].nic.mac1609_4 TotalLostPackets 6967
+scalar Network.V[6].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[6].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[6].nic.mac1609_4 TimesIntoBackoff 1724
+scalar Network.V[6].nic.mac1609_4 SlotsBackoff 2627
+scalar Network.V[6].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[6].nic.mac1609_4 totalBusyTime 41.502142
+scalar Network.V[6].veinsmobility startTime 19
+scalar Network.V[6].veinsmobility totalTime 255
+scalar Network.V[6].veinsmobility stopTime 275
+scalar Network.V[6].veinsmobility minSpeed 4.067372106413
+scalar Network.V[6].veinsmobility maxSpeed 13.999156328384
+scalar Network.V[6].veinsmobility totalDistance 3398.908106611
+scalar Network.V[6].veinsmobility totalCO2Emission 567.14236002465
+scalar Network.V[8].appl "Duplicate Messages" 30
+scalar Network.V[8].appl "Original Messages" 20
+scalar Network.V[8].appl "Plist Message" 151
+scalar Network.V[8].appl "Full CRL Recieved Time" 128.50820316731
+scalar Network.V[8].nic.phy80211p busyTime 0.17365721400786
+scalar Network.V[8].nic.mac1609_4 ReceivedUnicastPackets 151
+scalar Network.V[8].nic.mac1609_4 ReceivedBroadcasts 4138
+scalar Network.V[8].nic.mac1609_4 SentPackets 518
+scalar Network.V[8].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[8].nic.mac1609_4 SNIRLostPackets 6196
+scalar Network.V[8].nic.mac1609_4 RXTXLostPackets 70
+scalar Network.V[8].nic.mac1609_4 TotalLostPackets 6266
+scalar Network.V[8].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[8].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[8].nic.mac1609_4 TimesIntoBackoff 650
+scalar Network.V[8].nic.mac1609_4 SlotsBackoff 971
+scalar Network.V[8].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[8].nic.mac1609_4 totalBusyTime 43.767159784481
+scalar Network.V[8].veinsmobility startTime 25
+scalar Network.V[8].veinsmobility totalTime 256
+scalar Network.V[8].veinsmobility stopTime 282
+scalar Network.V[8].veinsmobility minSpeed 4.0643546214392
+scalar Network.V[8].veinsmobility maxSpeed 13.998192990993
+scalar Network.V[8].veinsmobility totalDistance 3394.0055053698
+scalar Network.V[8].veinsmobility totalCO2Emission 557.69248641277
+scalar Network.V[9].appl "Duplicate Messages" 30
+scalar Network.V[9].appl "Original Messages" 20
+scalar Network.V[9].appl "Plist Message" 91
+scalar Network.V[9].appl "Full CRL Recieved Time" 128.50820308352
+scalar Network.V[9].nic.phy80211p busyTime 0.17980481250009
+scalar Network.V[9].nic.mac1609_4 ReceivedUnicastPackets 91
+scalar Network.V[9].nic.mac1609_4 ReceivedBroadcasts 4190
+scalar Network.V[9].nic.mac1609_4 SentPackets 396
+scalar Network.V[9].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[9].nic.mac1609_4 SNIRLostPackets 6319
+scalar Network.V[9].nic.mac1609_4 RXTXLostPackets 11
+scalar Network.V[9].nic.mac1609_4 TotalLostPackets 6330
+scalar Network.V[9].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[9].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[9].nic.mac1609_4 TimesIntoBackoff 430
+scalar Network.V[9].nic.mac1609_4 SlotsBackoff 651
+scalar Network.V[9].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[9].nic.mac1609_4 totalBusyTime 44.595036302209
+scalar Network.V[9].veinsmobility startTime 28
+scalar Network.V[9].veinsmobility totalTime 255
+scalar Network.V[9].veinsmobility stopTime 284
+scalar Network.V[9].veinsmobility minSpeed 3.8828872453123
+scalar Network.V[9].veinsmobility maxSpeed 13.999686614256
+scalar Network.V[9].veinsmobility totalDistance 3391.4728310013
+scalar Network.V[9].veinsmobility totalCO2Emission 559.71143308008
+scalar Network.V[7].appl "Duplicate Messages" 30
+scalar Network.V[7].appl "Original Messages" 20
+scalar Network.V[7].appl "Plist Message" 133
+scalar Network.V[7].appl "Full CRL Recieved Time" 128.50820325474
+scalar Network.V[7].nic.phy80211p busyTime 0.16190428985515
+scalar Network.V[7].nic.mac1609_4 ReceivedUnicastPackets 133
+scalar Network.V[7].nic.mac1609_4 ReceivedBroadcasts 4330
+scalar Network.V[7].nic.mac1609_4 SentPackets 725
+scalar Network.V[7].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[7].nic.mac1609_4 SNIRLostPackets 6797
+scalar Network.V[7].nic.mac1609_4 RXTXLostPackets 83
+scalar Network.V[7].nic.mac1609_4 TotalLostPackets 6880
+scalar Network.V[7].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[7].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[7].nic.mac1609_4 TimesIntoBackoff 771
+scalar Network.V[7].nic.mac1609_4 SlotsBackoff 1168
+scalar Network.V[7].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[7].nic.mac1609_4 totalBusyTime 44.461478670659
+scalar Network.V[7].veinsmobility startTime 22
+scalar Network.V[7].veinsmobility totalTime 275
+scalar Network.V[7].veinsmobility stopTime 298
+scalar Network.V[7].veinsmobility minSpeed 4.0608742667126
+scalar Network.V[7].veinsmobility maxSpeed 13.999243474267
+scalar Network.V[7].veinsmobility totalDistance 3396.8340237558
+scalar Network.V[7].veinsmobility totalCO2Emission 570.45509986804
+scalar Network.V[10].appl "Duplicate Messages" 30
+scalar Network.V[10].appl "Original Messages" 20
+scalar Network.V[10].appl "Plist Message" 187
+scalar Network.V[10].appl "Full CRL Recieved Time" 128.50820300326
+scalar Network.V[10].nic.phy80211p busyTime 0.16417540520454
+scalar Network.V[10].nic.mac1609_4 ReceivedUnicastPackets 187
+scalar Network.V[10].nic.mac1609_4 ReceivedBroadcasts 4456
+scalar Network.V[10].nic.mac1609_4 SentPackets 1141
+scalar Network.V[10].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[10].nic.mac1609_4 SNIRLostPackets 6446
+scalar Network.V[10].nic.mac1609_4 RXTXLostPackets 50
+scalar Network.V[10].nic.mac1609_4 TotalLostPackets 6496
+scalar Network.V[10].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[10].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[10].nic.mac1609_4 TimesIntoBackoff 1207
+scalar Network.V[10].nic.mac1609_4 SlotsBackoff 1819
+scalar Network.V[10].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[10].nic.mac1609_4 totalBusyTime 44.96135705752
+scalar Network.V[10].veinsmobility startTime 31
+scalar Network.V[10].veinsmobility totalTime 268
+scalar Network.V[10].veinsmobility stopTime 300
+scalar Network.V[10].veinsmobility minSpeed 4.1947202222332
+scalar Network.V[10].veinsmobility maxSpeed 13.999328219597
+scalar Network.V[10].veinsmobility totalDistance 3398.8950839719
+scalar Network.V[10].veinsmobility totalCO2Emission 579.58996934347
+scalar Network.V[11].appl "Duplicate Messages" 30
+scalar Network.V[11].appl "Original Messages" 20
+scalar Network.V[11].appl "Plist Message" 218
+scalar Network.V[11].appl "Full CRL Recieved Time" 128.50820292226
+scalar Network.V[11].nic.phy80211p busyTime 0.16827257142865
+scalar Network.V[11].nic.mac1609_4 ReceivedUnicastPackets 218
+scalar Network.V[11].nic.mac1609_4 ReceivedBroadcasts 4446
+scalar Network.V[11].nic.mac1609_4 SentPackets 1038
+scalar Network.V[11].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[11].nic.mac1609_4 SNIRLostPackets 6789
+scalar Network.V[11].nic.mac1609_4 RXTXLostPackets 37
+scalar Network.V[11].nic.mac1609_4 TotalLostPackets 6826
+scalar Network.V[11].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[11].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[11].nic.mac1609_4 TimesIntoBackoff 1118
+scalar Network.V[11].nic.mac1609_4 SlotsBackoff 1672
+scalar Network.V[11].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[11].nic.mac1609_4 totalBusyTime 45.212542005117
+scalar Network.V[11].veinsmobility startTime 34
+scalar Network.V[11].veinsmobility totalTime 266
+scalar Network.V[11].veinsmobility stopTime 300
+scalar Network.V[11].veinsmobility minSpeed 3.8489417596173
+scalar Network.V[11].veinsmobility maxSpeed 13.999905188144
+scalar Network.V[11].veinsmobility totalDistance 3390.6262491918
+scalar Network.V[11].veinsmobility totalCO2Emission 560.65704511075
+scalar Network.V[12].appl "Duplicate Messages" 26
+scalar Network.V[12].appl "Original Messages" 20
+scalar Network.V[12].appl "Plist Message" 121
+scalar Network.V[12].appl "Full CRL Recieved Time" 128.48590182638
+scalar Network.V[12].nic.phy80211p busyTime 0.16712158174913
+scalar Network.V[12].nic.mac1609_4 ReceivedUnicastPackets 121
+scalar Network.V[12].nic.mac1609_4 ReceivedBroadcasts 4514
+scalar Network.V[12].nic.mac1609_4 SentPackets 983
+scalar Network.V[12].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[12].nic.mac1609_4 SNIRLostPackets 6804
+scalar Network.V[12].nic.mac1609_4 RXTXLostPackets 97
+scalar Network.V[12].nic.mac1609_4 TotalLostPackets 6901
+scalar Network.V[12].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[12].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[12].nic.mac1609_4 TimesIntoBackoff 1080
+scalar Network.V[12].nic.mac1609_4 SlotsBackoff 1580
+scalar Network.V[12].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[12].nic.mac1609_4 totalBusyTime 44.375626333977
+scalar Network.V[12].veinsmobility startTime 37
+scalar Network.V[12].veinsmobility totalTime 263
+scalar Network.V[12].veinsmobility stopTime 300
+scalar Network.V[12].veinsmobility minSpeed 3.9219617499206
+scalar Network.V[12].veinsmobility maxSpeed 13.999539690407
+scalar Network.V[12].veinsmobility totalDistance 3379.2300978306
+scalar Network.V[12].veinsmobility totalCO2Emission 551.06456786796
+scalar Network.V[13].appl "Duplicate Messages" 14
+scalar Network.V[13].appl "Original Messages" 20
+scalar Network.V[13].appl "Plist Message" 165
+scalar Network.V[13].appl "Full CRL Recieved Time" 128.50820274143
+scalar Network.V[13].nic.phy80211p busyTime 0.17229735384624
+scalar Network.V[13].nic.mac1609_4 ReceivedUnicastPackets 165
+scalar Network.V[13].nic.mac1609_4 ReceivedBroadcasts 4559
+scalar Network.V[13].nic.mac1609_4 SentPackets 435
+scalar Network.V[13].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[13].nic.mac1609_4 SNIRLostPackets 6711
+scalar Network.V[13].nic.mac1609_4 RXTXLostPackets 13
+scalar Network.V[13].nic.mac1609_4 TotalLostPackets 6724
+scalar Network.V[13].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[13].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[13].nic.mac1609_4 TimesIntoBackoff 468
+scalar Network.V[13].nic.mac1609_4 SlotsBackoff 669
+scalar Network.V[13].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[13].nic.mac1609_4 totalBusyTime 43.400739152625
+scalar Network.V[13].veinsmobility startTime 40
+scalar Network.V[13].veinsmobility totalTime 260
+scalar Network.V[13].veinsmobility stopTime 300
+scalar Network.V[13].veinsmobility minSpeed 4.0161385181755
+scalar Network.V[13].veinsmobility maxSpeed 13.999926172604
+scalar Network.V[13].veinsmobility totalDistance 3361.9519593878
+scalar Network.V[13].veinsmobility totalCO2Emission 549.33539782939
+scalar Network.V[14].appl "Duplicate Messages" 14
+scalar Network.V[14].appl "Original Messages" 20
+scalar Network.V[14].appl "Plist Message" 130
+scalar Network.V[14].appl "Full CRL Recieved Time" 128.50820269545
+scalar Network.V[14].nic.phy80211p busyTime 0.17059028793783
+scalar Network.V[14].nic.mac1609_4 ReceivedUnicastPackets 130
+scalar Network.V[14].nic.mac1609_4 ReceivedBroadcasts 4656
+scalar Network.V[14].nic.mac1609_4 SentPackets 718
+scalar Network.V[14].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[14].nic.mac1609_4 SNIRLostPackets 6774
+scalar Network.V[14].nic.mac1609_4 RXTXLostPackets 23
+scalar Network.V[14].nic.mac1609_4 TotalLostPackets 6797
+scalar Network.V[14].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[14].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[14].nic.mac1609_4 TimesIntoBackoff 746
+scalar Network.V[14].nic.mac1609_4 SlotsBackoff 1138
+scalar Network.V[14].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[14].nic.mac1609_4 totalBusyTime 43.107534
+scalar Network.V[14].veinsmobility startTime 43
+scalar Network.V[14].veinsmobility totalTime 257
+scalar Network.V[14].veinsmobility stopTime 300
+scalar Network.V[14].veinsmobility minSpeed 3.9992962979057
+scalar Network.V[14].veinsmobility maxSpeed 13.999656618503
+scalar Network.V[14].veinsmobility totalDistance 3349.3995357706
+scalar Network.V[14].veinsmobility totalCO2Emission 545.44949929252
+scalar Network.V[15].appl "Duplicate Messages" 14
+scalar Network.V[15].appl "Original Messages" 20
+scalar Network.V[15].appl "Plist Message" 131
+scalar Network.V[15].appl "Full CRL Recieved Time" 128.50820273209
+scalar Network.V[15].nic.phy80211p busyTime 0.17327741732292
+scalar Network.V[15].nic.mac1609_4 ReceivedUnicastPackets 131
+scalar Network.V[15].nic.mac1609_4 ReceivedBroadcasts 4713
+scalar Network.V[15].nic.mac1609_4 SentPackets 731
+scalar Network.V[15].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[15].nic.mac1609_4 SNIRLostPackets 7017
+scalar Network.V[15].nic.mac1609_4 RXTXLostPackets 12
+scalar Network.V[15].nic.mac1609_4 TotalLostPackets 7029
+scalar Network.V[15].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[15].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[15].nic.mac1609_4 TimesIntoBackoff 740
+scalar Network.V[15].nic.mac1609_4 SlotsBackoff 1041
+scalar Network.V[15].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[15].nic.mac1609_4 totalBusyTime 43.182659
+scalar Network.V[15].veinsmobility startTime 46
+scalar Network.V[15].veinsmobility totalTime 254
+scalar Network.V[15].veinsmobility stopTime 300
+scalar Network.V[15].veinsmobility minSpeed 4.1510441398274
+scalar Network.V[15].veinsmobility maxSpeed 13.999630704054
+scalar Network.V[15].veinsmobility totalDistance 3333.8237153224
+scalar Network.V[15].veinsmobility totalCO2Emission 542.32842735094
+scalar Network.V[16].appl "Duplicate Messages" 14
+scalar Network.V[16].appl "Original Messages" 20
+scalar Network.V[16].appl "Plist Message" 166
+scalar Network.V[16].appl "Full CRL Recieved Time" 128.50820283352
+scalar Network.V[16].nic.phy80211p busyTime 0.16993067729092
+scalar Network.V[16].nic.mac1609_4 ReceivedUnicastPackets 166
+scalar Network.V[16].nic.mac1609_4 ReceivedBroadcasts 4827
+scalar Network.V[16].nic.mac1609_4 SentPackets 1025
+scalar Network.V[16].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[16].nic.mac1609_4 SNIRLostPackets 6528
+scalar Network.V[16].nic.mac1609_4 RXTXLostPackets 144
+scalar Network.V[16].nic.mac1609_4 TotalLostPackets 6672
+scalar Network.V[16].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[16].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[16].nic.mac1609_4 TimesIntoBackoff 1107
+scalar Network.V[16].nic.mac1609_4 SlotsBackoff 1621
+scalar Network.V[16].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[16].nic.mac1609_4 totalBusyTime 42.901305
+scalar Network.V[16].veinsmobility startTime 49
+scalar Network.V[16].veinsmobility totalTime 251
+scalar Network.V[16].veinsmobility stopTime 300
+scalar Network.V[16].veinsmobility minSpeed 3.8447853377257
+scalar Network.V[16].veinsmobility maxSpeed 13.999218537293
+scalar Network.V[16].veinsmobility totalDistance 3321.1198362535
+scalar Network.V[16].veinsmobility totalCO2Emission 538.0667218696
+scalar Network.V[17].appl "Duplicate Messages" 16
+scalar Network.V[17].appl "Original Messages" 20
+scalar Network.V[17].appl "Plist Message" 115
+scalar Network.V[17].appl "Full CRL Recieved Time" 168.44895618126
+scalar Network.V[17].nic.phy80211p busyTime 0.18217941935493
+scalar Network.V[17].nic.mac1609_4 ReceivedUnicastPackets 115
+scalar Network.V[17].nic.mac1609_4 ReceivedBroadcasts 5080
+scalar Network.V[17].nic.mac1609_4 SentPackets 784
+scalar Network.V[17].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[17].nic.mac1609_4 SNIRLostPackets 6615
+scalar Network.V[17].nic.mac1609_4 RXTXLostPackets 72
+scalar Network.V[17].nic.mac1609_4 TotalLostPackets 6687
+scalar Network.V[17].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[17].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[17].nic.mac1609_4 TimesIntoBackoff 862
+scalar Network.V[17].nic.mac1609_4 SlotsBackoff 1319
+scalar Network.V[17].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[17].nic.mac1609_4 totalBusyTime 44.431112420859
+scalar Network.V[17].veinsmobility startTime 52
+scalar Network.V[17].veinsmobility totalTime 248
+scalar Network.V[17].veinsmobility stopTime 300
+scalar Network.V[17].veinsmobility minSpeed 3.8698786158062
+scalar Network.V[17].veinsmobility maxSpeed 13.999116995411
+scalar Network.V[17].veinsmobility totalDistance 3035.3101308709
+scalar Network.V[17].veinsmobility totalCO2Emission 510.73920409043
+scalar Network.V[18].appl "Duplicate Messages" 16
+scalar Network.V[18].appl "Original Messages" 20
+scalar Network.V[18].appl "Plist Message" 166
+scalar Network.V[18].appl "Full CRL Recieved Time" 168.44895608672
+scalar Network.V[18].nic.phy80211p busyTime 0.18011454693887
+scalar Network.V[18].nic.mac1609_4 ReceivedUnicastPackets 166
+scalar Network.V[18].nic.mac1609_4 ReceivedBroadcasts 4994
+scalar Network.V[18].nic.mac1609_4 SentPackets 725
+scalar Network.V[18].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[18].nic.mac1609_4 SNIRLostPackets 6445
+scalar Network.V[18].nic.mac1609_4 RXTXLostPackets 93
+scalar Network.V[18].nic.mac1609_4 TotalLostPackets 6538
+scalar Network.V[18].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[18].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[18].nic.mac1609_4 TimesIntoBackoff 813
+scalar Network.V[18].nic.mac1609_4 SlotsBackoff 1209
+scalar Network.V[18].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[18].nic.mac1609_4 totalBusyTime 43.24880779036
+scalar Network.V[18].veinsmobility startTime 55
+scalar Network.V[18].veinsmobility totalTime 245
+scalar Network.V[18].veinsmobility stopTime 300
+scalar Network.V[18].veinsmobility minSpeed 4.0700236807532
+scalar Network.V[18].veinsmobility maxSpeed 13.999699370395
+scalar Network.V[18].veinsmobility totalDistance 3220.1056082863
+scalar Network.V[18].veinsmobility totalCO2Emission 528.31344222078
+scalar Network.V[19].appl "Duplicate Messages" 19
+scalar Network.V[19].appl "Original Messages" 20
+scalar Network.V[19].appl "Plist Message" 198
+scalar Network.V[19].appl "Full CRL Recieved Time" 168.44895600199
+scalar Network.V[19].nic.phy80211p busyTime 0.17787421487612
+scalar Network.V[19].nic.mac1609_4 ReceivedUnicastPackets 198
+scalar Network.V[19].nic.mac1609_4 ReceivedBroadcasts 5044
+scalar Network.V[19].nic.mac1609_4 SentPackets 933
+scalar Network.V[19].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[19].nic.mac1609_4 SNIRLostPackets 6500
+scalar Network.V[19].nic.mac1609_4 RXTXLostPackets 24
+scalar Network.V[19].nic.mac1609_4 TotalLostPackets 6524
+scalar Network.V[19].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[19].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[19].nic.mac1609_4 TimesIntoBackoff 990
+scalar Network.V[19].nic.mac1609_4 SlotsBackoff 1520
+scalar Network.V[19].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[19].nic.mac1609_4 totalBusyTime 42.6868803662
+scalar Network.V[19].veinsmobility startTime 58
+scalar Network.V[19].veinsmobility totalTime 242
+scalar Network.V[19].veinsmobility stopTime 300
+scalar Network.V[19].veinsmobility minSpeed 3.8447639940612
+scalar Network.V[19].veinsmobility maxSpeed 13.999608246239
+scalar Network.V[19].veinsmobility totalDistance 3175.3719379334
+scalar Network.V[19].veinsmobility totalCO2Emission 521.39743552733
+scalar Network.V[20].appl "Duplicate Messages" 16
+scalar Network.V[20].appl "Original Messages" 20
+scalar Network.V[20].appl "Plist Message" 312
+scalar Network.V[20].appl "Full CRL Recieved Time" 168.44895592189
+scalar Network.V[20].nic.phy80211p busyTime 0.17990349790804
+scalar Network.V[20].nic.mac1609_4 ReceivedUnicastPackets 312
+scalar Network.V[20].nic.mac1609_4 ReceivedBroadcasts 5019
+scalar Network.V[20].nic.mac1609_4 SentPackets 849
+scalar Network.V[20].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[20].nic.mac1609_4 SNIRLostPackets 6570
+scalar Network.V[20].nic.mac1609_4 RXTXLostPackets 82
+scalar Network.V[20].nic.mac1609_4 TotalLostPackets 6652
+scalar Network.V[20].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[20].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[20].nic.mac1609_4 TimesIntoBackoff 857
+scalar Network.V[20].nic.mac1609_4 SlotsBackoff 1270
+scalar Network.V[20].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[20].nic.mac1609_4 totalBusyTime 42.489524211666
+scalar Network.V[20].veinsmobility startTime 61
+scalar Network.V[20].veinsmobility totalTime 239
+scalar Network.V[20].veinsmobility stopTime 300
+scalar Network.V[20].veinsmobility minSpeed 4.018615917157
+scalar Network.V[20].veinsmobility maxSpeed 13.999763481072
+scalar Network.V[20].veinsmobility totalDistance 3154.3219425974
+scalar Network.V[20].veinsmobility totalCO2Emission 522.46885186744
+scalar Network.V[21].appl "Duplicate Messages" 16
+scalar Network.V[21].appl "Original Messages" 20
+scalar Network.V[21].appl "Plist Message" 98
+scalar Network.V[21].appl "Full CRL Recieved Time" 168.44895583824
+scalar Network.V[21].nic.phy80211p busyTime 0.18212596610179
+scalar Network.V[21].nic.mac1609_4 ReceivedUnicastPackets 98
+scalar Network.V[21].nic.mac1609_4 ReceivedBroadcasts 5032
+scalar Network.V[21].nic.mac1609_4 SentPackets 599
+scalar Network.V[21].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[21].nic.mac1609_4 SNIRLostPackets 6379
+scalar Network.V[21].nic.mac1609_4 RXTXLostPackets 62
+scalar Network.V[21].nic.mac1609_4 TotalLostPackets 6441
+scalar Network.V[21].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[21].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[21].nic.mac1609_4 TimesIntoBackoff 648
+scalar Network.V[21].nic.mac1609_4 SlotsBackoff 996
+scalar Network.V[21].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[21].nic.mac1609_4 totalBusyTime 41.789020061317
+scalar Network.V[21].veinsmobility startTime 64
+scalar Network.V[21].veinsmobility totalTime 236
+scalar Network.V[21].veinsmobility stopTime 300
+scalar Network.V[21].veinsmobility minSpeed 4.2842987557744
+scalar Network.V[21].veinsmobility maxSpeed 13.999963147973
+scalar Network.V[21].veinsmobility totalDistance 3115.1655598982
+scalar Network.V[21].veinsmobility totalCO2Emission 512.34158807713
+scalar Network.V[22].appl "Duplicate Messages" 16
+scalar Network.V[22].appl "Original Messages" 20
+scalar Network.V[22].appl "Plist Message" 195
+scalar Network.V[22].appl "Full CRL Recieved Time" 168.44895575845
+scalar Network.V[22].nic.phy80211p busyTime 0.18465641201726
+scalar Network.V[22].nic.mac1609_4 ReceivedUnicastPackets 195
+scalar Network.V[22].nic.mac1609_4 ReceivedBroadcasts 4967
+scalar Network.V[22].nic.mac1609_4 SentPackets 704
+scalar Network.V[22].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[22].nic.mac1609_4 SNIRLostPackets 6769
+scalar Network.V[22].nic.mac1609_4 RXTXLostPackets 39
+scalar Network.V[22].nic.mac1609_4 TotalLostPackets 6808
+scalar Network.V[22].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[22].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[22].nic.mac1609_4 TimesIntoBackoff 727
+scalar Network.V[22].nic.mac1609_4 SlotsBackoff 1103
+scalar Network.V[22].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[22].nic.mac1609_4 totalBusyTime 42.045136656829
+scalar Network.V[22].veinsmobility startTime 67
+scalar Network.V[22].veinsmobility totalTime 233
+scalar Network.V[22].veinsmobility stopTime 300
+scalar Network.V[22].veinsmobility minSpeed 4.1832233416825
+scalar Network.V[22].veinsmobility maxSpeed 13.997139654839
+scalar Network.V[22].veinsmobility totalDistance 3018.6378543054
+scalar Network.V[22].veinsmobility totalCO2Emission 501.86729923752
+scalar Network.V[23].appl "Duplicate Messages" 15
+scalar Network.V[23].appl "Original Messages" 20
+scalar Network.V[23].appl "Plist Message" 131
+scalar Network.V[23].appl "Full CRL Recieved Time" 168.46494044883
+scalar Network.V[23].nic.phy80211p busyTime 0.172170052174
+scalar Network.V[23].nic.mac1609_4 ReceivedUnicastPackets 131
+scalar Network.V[23].nic.mac1609_4 ReceivedBroadcasts 4840
+scalar Network.V[23].nic.mac1609_4 SentPackets 648
+scalar Network.V[23].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[23].nic.mac1609_4 SNIRLostPackets 6953
+scalar Network.V[23].nic.mac1609_4 RXTXLostPackets 76
+scalar Network.V[23].nic.mac1609_4 TotalLostPackets 7029
+scalar Network.V[23].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[23].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[23].nic.mac1609_4 TimesIntoBackoff 671
+scalar Network.V[23].nic.mac1609_4 SlotsBackoff 1017
+scalar Network.V[23].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[23].nic.mac1609_4 totalBusyTime 38.68537635109
+scalar Network.V[23].veinsmobility startTime 70
+scalar Network.V[23].veinsmobility totalTime 230
+scalar Network.V[23].veinsmobility stopTime 300
+scalar Network.V[23].veinsmobility minSpeed 4.0859593419879
+scalar Network.V[23].veinsmobility maxSpeed 13.998363435396
+scalar Network.V[23].veinsmobility totalDistance 2894.0839603349
+scalar Network.V[23].veinsmobility totalCO2Emission 486.89343818161
+scalar Network.V[24].appl "Duplicate Messages" 5
+scalar Network.V[24].appl "Original Messages" 20
+scalar Network.V[24].appl "Plist Message" 94
+scalar Network.V[24].appl "Full CRL Recieved Time" 168.47132137303
+scalar Network.V[24].nic.phy80211p busyTime 0.17591178854634
+scalar Network.V[24].nic.mac1609_4 ReceivedUnicastPackets 94
+scalar Network.V[24].nic.mac1609_4 ReceivedBroadcasts 4735
+scalar Network.V[24].nic.mac1609_4 SentPackets 334
+scalar Network.V[24].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[24].nic.mac1609_4 SNIRLostPackets 6924
+scalar Network.V[24].nic.mac1609_4 RXTXLostPackets 8
+scalar Network.V[24].nic.mac1609_4 TotalLostPackets 6932
+scalar Network.V[24].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[24].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[24].nic.mac1609_4 TimesIntoBackoff 366
+scalar Network.V[24].nic.mac1609_4 SlotsBackoff 567
+scalar Network.V[24].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[24].nic.mac1609_4 totalBusyTime 38.05592869031
+scalar Network.V[24].veinsmobility startTime 73
+scalar Network.V[24].veinsmobility totalTime 227
+scalar Network.V[24].veinsmobility stopTime 300
+scalar Network.V[24].veinsmobility minSpeed 4.0735588402093
+scalar Network.V[24].veinsmobility maxSpeed 13.999299916551
+scalar Network.V[24].veinsmobility totalDistance 2986.6971725724
+scalar Network.V[24].veinsmobility totalCO2Emission 491.65825760153
+scalar Network.V[25].appl "Duplicate Messages" 5
+scalar Network.V[25].appl "Original Messages" 20
+scalar Network.V[25].appl "Plist Message" 42
+scalar Network.V[25].appl "Full CRL Recieved Time" 168.4713213176
+scalar Network.V[25].nic.phy80211p busyTime 0.17844528571438
+scalar Network.V[25].nic.mac1609_4 ReceivedUnicastPackets 42
+scalar Network.V[25].nic.mac1609_4 ReceivedBroadcasts 4684
+scalar Network.V[25].nic.mac1609_4 SentPackets 327
+scalar Network.V[25].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[25].nic.mac1609_4 SNIRLostPackets 7075
+scalar Network.V[25].nic.mac1609_4 RXTXLostPackets 39
+scalar Network.V[25].nic.mac1609_4 TotalLostPackets 7114
+scalar Network.V[25].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[25].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[25].nic.mac1609_4 TimesIntoBackoff 404
+scalar Network.V[25].nic.mac1609_4 SlotsBackoff 570
+scalar Network.V[25].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[25].nic.mac1609_4 totalBusyTime 38.116579723868
+scalar Network.V[25].veinsmobility startTime 76
+scalar Network.V[25].veinsmobility totalTime 224
+scalar Network.V[25].veinsmobility stopTime 300
+scalar Network.V[25].veinsmobility minSpeed 4.0635240824116
+scalar Network.V[25].veinsmobility maxSpeed 13.999252574216
+scalar Network.V[25].veinsmobility totalDistance 2967.0436007467
+scalar Network.V[25].veinsmobility totalCO2Emission 492.05111463505
+scalar Network.V[26].appl "Duplicate Messages" 7
+scalar Network.V[26].appl "Original Messages" 20
+scalar Network.V[26].appl "Plist Message" 76
+scalar Network.V[26].appl "Full CRL Recieved Time" 168.47132128926
+scalar Network.V[26].nic.phy80211p busyTime 0.18192550226254
+scalar Network.V[26].nic.mac1609_4 ReceivedUnicastPackets 76
+scalar Network.V[26].nic.mac1609_4 ReceivedBroadcasts 4630
+scalar Network.V[26].nic.mac1609_4 SentPackets 428
+scalar Network.V[26].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[26].nic.mac1609_4 SNIRLostPackets 7367
+scalar Network.V[26].nic.mac1609_4 RXTXLostPackets 14
+scalar Network.V[26].nic.mac1609_4 TotalLostPackets 7381
+scalar Network.V[26].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[26].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[26].nic.mac1609_4 TimesIntoBackoff 462
+scalar Network.V[26].nic.mac1609_4 SlotsBackoff 690
+scalar Network.V[26].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[26].nic.mac1609_4 totalBusyTime 38.614482800667
+scalar Network.V[26].veinsmobility startTime 79
+scalar Network.V[26].veinsmobility totalTime 221
+scalar Network.V[26].veinsmobility stopTime 300
+scalar Network.V[26].veinsmobility minSpeed 4.0267229073465
+scalar Network.V[26].veinsmobility maxSpeed 13.999621272914
+scalar Network.V[26].veinsmobility totalDistance 2941.3865416002
+scalar Network.V[26].veinsmobility totalCO2Emission 484.76697057671
+scalar Network.V[27].appl "Duplicate Messages" 5
+scalar Network.V[27].appl "Original Messages" 20
+scalar Network.V[27].appl "Plist Message" 116
+scalar Network.V[27].appl "Full CRL Recieved Time" 168.47132129951
+scalar Network.V[27].nic.phy80211p busyTime 0.18309948623862
+scalar Network.V[27].nic.mac1609_4 ReceivedUnicastPackets 116
+scalar Network.V[27].nic.mac1609_4 ReceivedBroadcasts 4610
+scalar Network.V[27].nic.mac1609_4 SentPackets 398
+scalar Network.V[27].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[27].nic.mac1609_4 SNIRLostPackets 7080
+scalar Network.V[27].nic.mac1609_4 RXTXLostPackets 56
+scalar Network.V[27].nic.mac1609_4 TotalLostPackets 7136
+scalar Network.V[27].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[27].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[27].nic.mac1609_4 TimesIntoBackoff 492
+scalar Network.V[27].nic.mac1609_4 SlotsBackoff 746
+scalar Network.V[27].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[27].nic.mac1609_4 totalBusyTime 38.408742249099
+scalar Network.V[27].veinsmobility startTime 82
+scalar Network.V[27].veinsmobility totalTime 218
+scalar Network.V[27].veinsmobility stopTime 300
+scalar Network.V[27].veinsmobility minSpeed 3.8169569386458
+scalar Network.V[27].veinsmobility maxSpeed 13.998507969014
+scalar Network.V[27].veinsmobility totalDistance 2875.5598898605
+scalar Network.V[27].veinsmobility totalCO2Emission 480.83844553993
+scalar Network.V[28].appl "Duplicate Messages" 5
+scalar Network.V[28].appl "Original Messages" 20
+scalar Network.V[28].appl "Plist Message" 494
+scalar Network.V[28].appl "Full CRL Recieved Time" 168.4713213464
+scalar Network.V[28].nic.phy80211p busyTime 0.16301015813962
+scalar Network.V[28].nic.mac1609_4 ReceivedUnicastPackets 494
+scalar Network.V[28].nic.mac1609_4 ReceivedBroadcasts 4598
+scalar Network.V[28].nic.mac1609_4 SentPackets 1654
+scalar Network.V[28].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[28].nic.mac1609_4 SNIRLostPackets 6771
+scalar Network.V[28].nic.mac1609_4 RXTXLostPackets 172
+scalar Network.V[28].nic.mac1609_4 TotalLostPackets 6943
+scalar Network.V[28].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[28].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[28].nic.mac1609_4 TimesIntoBackoff 1674
+scalar Network.V[28].nic.mac1609_4 SlotsBackoff 2463
+scalar Network.V[28].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[28].nic.mac1609_4 totalBusyTime 37.815822451248
+scalar Network.V[28].veinsmobility startTime 85
+scalar Network.V[28].veinsmobility totalTime 215
+scalar Network.V[28].veinsmobility stopTime 300
+scalar Network.V[28].veinsmobility minSpeed 4.0343364698305
+scalar Network.V[28].veinsmobility maxSpeed 13.999620908881
+scalar Network.V[28].veinsmobility totalDistance 2857.6845746555
+scalar Network.V[28].veinsmobility totalCO2Emission 474.93153283335
+scalar Network.V[29].appl "Duplicate Messages" 8
+scalar Network.V[29].appl "Original Messages" 20
+scalar Network.V[29].appl "Plist Message" 298
+scalar Network.V[29].appl "Full CRL Recieved Time" 168.484109418
+scalar Network.V[29].nic.phy80211p busyTime 0.18070464150952
+scalar Network.V[29].nic.mac1609_4 ReceivedUnicastPackets 298
+scalar Network.V[29].nic.mac1609_4 ReceivedBroadcasts 4593
+scalar Network.V[29].nic.mac1609_4 SentPackets 764
+scalar Network.V[29].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[29].nic.mac1609_4 SNIRLostPackets 6953
+scalar Network.V[29].nic.mac1609_4 RXTXLostPackets 60
+scalar Network.V[29].nic.mac1609_4 TotalLostPackets 7013
+scalar Network.V[29].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[29].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[29].nic.mac1609_4 TimesIntoBackoff 812
+scalar Network.V[29].nic.mac1609_4 SlotsBackoff 1278
+scalar Network.V[29].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[29].nic.mac1609_4 totalBusyTime 37.826714846588
+scalar Network.V[29].veinsmobility startTime 88
+scalar Network.V[29].veinsmobility totalTime 212
+scalar Network.V[29].veinsmobility stopTime 300
+scalar Network.V[29].veinsmobility minSpeed 4.0013211675714
+scalar Network.V[29].veinsmobility maxSpeed 13.999449843408
+scalar Network.V[29].veinsmobility totalDistance 2840.2618073734
+scalar Network.V[29].veinsmobility totalCO2Emission 471.7310652617
+scalar Network.V[30].appl "Duplicate Messages" 8
+scalar Network.V[30].appl "Original Messages" 20
+scalar Network.V[30].appl "Plist Message" 210
+scalar Network.V[30].appl "Full CRL Recieved Time" 168.48410951445
+scalar Network.V[30].nic.phy80211p busyTime 0.18596340669866
+scalar Network.V[30].nic.mac1609_4 ReceivedUnicastPackets 210
+scalar Network.V[30].nic.mac1609_4 ReceivedBroadcasts 4609
+scalar Network.V[30].nic.mac1609_4 SentPackets 702
+scalar Network.V[30].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[30].nic.mac1609_4 SNIRLostPackets 6920
+scalar Network.V[30].nic.mac1609_4 RXTXLostPackets 105
+scalar Network.V[30].nic.mac1609_4 TotalLostPackets 7025
+scalar Network.V[30].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[30].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[30].nic.mac1609_4 TimesIntoBackoff 748
+scalar Network.V[30].nic.mac1609_4 SlotsBackoff 1147
+scalar Network.V[30].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[30].nic.mac1609_4 totalBusyTime 38.386886
+scalar Network.V[30].veinsmobility startTime 91
+scalar Network.V[30].veinsmobility totalTime 209
+scalar Network.V[30].veinsmobility stopTime 300
+scalar Network.V[30].veinsmobility minSpeed 4.0929231651139
+scalar Network.V[30].veinsmobility maxSpeed 13.999186862605
+scalar Network.V[30].veinsmobility totalDistance 2821.9921171832
+scalar Network.V[30].veinsmobility totalCO2Emission 466.26736329422
+scalar Network.V[31].appl "Duplicate Messages" 7
+scalar Network.V[31].appl "Original Messages" 20
+scalar Network.V[31].appl "Plist Message" 189
+scalar Network.V[31].appl "Full CRL Recieved Time" 168.48410962344
+scalar Network.V[31].nic.phy80211p busyTime 0.19005518446611
+scalar Network.V[31].nic.mac1609_4 ReceivedUnicastPackets 189
+scalar Network.V[31].nic.mac1609_4 ReceivedBroadcasts 4599
+scalar Network.V[31].nic.mac1609_4 SentPackets 842
+scalar Network.V[31].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[31].nic.mac1609_4 SNIRLostPackets 7085
+scalar Network.V[31].nic.mac1609_4 RXTXLostPackets 75
+scalar Network.V[31].nic.mac1609_4 TotalLostPackets 7160
+scalar Network.V[31].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[31].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[31].nic.mac1609_4 TimesIntoBackoff 908
+scalar Network.V[31].nic.mac1609_4 SlotsBackoff 1355
+scalar Network.V[31].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[31].nic.mac1609_4 totalBusyTime 39.125794001186
+scalar Network.V[31].veinsmobility startTime 94
+scalar Network.V[31].veinsmobility totalTime 206
+scalar Network.V[31].veinsmobility stopTime 300
+scalar Network.V[31].veinsmobility minSpeed 4.2052558286512
+scalar Network.V[31].veinsmobility maxSpeed 13.998518423606
+scalar Network.V[31].veinsmobility totalDistance 2787.8423971628
+scalar Network.V[31].veinsmobility totalCO2Emission 467.43028278003
+scalar Network.V[32].appl "Duplicate Messages" 5
+scalar Network.V[32].appl "Original Messages" 20
+scalar Network.V[32].appl "Plist Message" 42
+scalar Network.V[32].appl "Full CRL Recieved Time" 168.50644980252
+scalar Network.V[32].nic.phy80211p busyTime 0.19775207881783
+scalar Network.V[32].nic.mac1609_4 ReceivedUnicastPackets 42
+scalar Network.V[32].nic.mac1609_4 ReceivedBroadcasts 4637
+scalar Network.V[32].nic.mac1609_4 SentPackets 393
+scalar Network.V[32].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[32].nic.mac1609_4 SNIRLostPackets 7200
+scalar Network.V[32].nic.mac1609_4 RXTXLostPackets 59
+scalar Network.V[32].nic.mac1609_4 TotalLostPackets 7259
+scalar Network.V[32].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[32].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[32].nic.mac1609_4 TimesIntoBackoff 523
+scalar Network.V[32].nic.mac1609_4 SlotsBackoff 760
+scalar Network.V[32].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[32].nic.mac1609_4 totalBusyTime 38.788913
+scalar Network.V[32].veinsmobility startTime 97
+scalar Network.V[32].veinsmobility totalTime 203
+scalar Network.V[32].veinsmobility stopTime 300
+scalar Network.V[32].veinsmobility minSpeed 3.9195603011693
+scalar Network.V[32].veinsmobility maxSpeed 13.999084359321
+scalar Network.V[32].veinsmobility totalDistance 2716.559258491
+scalar Network.V[32].veinsmobility totalCO2Emission 450.78243818197
+scalar Network.V[33].appl "Duplicate Messages" 12
+scalar Network.V[33].appl "Original Messages" 20
+scalar Network.V[33].appl "Plist Message" 74
+scalar Network.V[33].appl "Full CRL Recieved Time" 188.48118352679
+scalar Network.V[33].nic.phy80211p busyTime 0.2002429600001
+scalar Network.V[33].nic.mac1609_4 ReceivedUnicastPackets 74
+scalar Network.V[33].nic.mac1609_4 ReceivedBroadcasts 4511
+scalar Network.V[33].nic.mac1609_4 SentPackets 318
+scalar Network.V[33].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[33].nic.mac1609_4 SNIRLostPackets 7443
+scalar Network.V[33].nic.mac1609_4 RXTXLostPackets 3
+scalar Network.V[33].nic.mac1609_4 TotalLostPackets 7446
+scalar Network.V[33].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[33].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[33].nic.mac1609_4 TimesIntoBackoff 328
+scalar Network.V[33].nic.mac1609_4 SlotsBackoff 485
+scalar Network.V[33].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[33].nic.mac1609_4 totalBusyTime 38.34431
+scalar Network.V[33].veinsmobility startTime 100
+scalar Network.V[33].veinsmobility totalTime 200
+scalar Network.V[33].veinsmobility stopTime 300
+scalar Network.V[33].veinsmobility minSpeed 3.9747482432421
+scalar Network.V[33].veinsmobility maxSpeed 13.999452173801
+scalar Network.V[33].veinsmobility totalDistance 2684.1382606813
+scalar Network.V[33].veinsmobility totalCO2Emission 447.11064588316
+scalar Network.V[34].appl "Duplicate Messages" 11
+scalar Network.V[34].appl "Original Messages" 20
+scalar Network.V[34].appl "Plist Message" 52
+scalar Network.V[34].appl "Full CRL Recieved Time" 188.48118350421
+scalar Network.V[34].nic.phy80211p busyTime 0.19777003045695
+scalar Network.V[34].nic.mac1609_4 ReceivedUnicastPackets 52
+scalar Network.V[34].nic.mac1609_4 ReceivedBroadcasts 4366
+scalar Network.V[34].nic.mac1609_4 SentPackets 419
+scalar Network.V[34].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[34].nic.mac1609_4 SNIRLostPackets 7549
+scalar Network.V[34].nic.mac1609_4 RXTXLostPackets 20
+scalar Network.V[34].nic.mac1609_4 TotalLostPackets 7569
+scalar Network.V[34].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[34].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[34].nic.mac1609_4 TimesIntoBackoff 441
+scalar Network.V[34].nic.mac1609_4 SlotsBackoff 681
+scalar Network.V[34].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[34].nic.mac1609_4 totalBusyTime 37.828083143696
+scalar Network.V[34].veinsmobility startTime 103
+scalar Network.V[34].veinsmobility totalTime 197
+scalar Network.V[34].veinsmobility stopTime 300
+scalar Network.V[34].veinsmobility minSpeed 4.2292426157767
+scalar Network.V[34].veinsmobility maxSpeed 13.999056284162
+scalar Network.V[34].veinsmobility totalDistance 2651.8920160264
+scalar Network.V[34].veinsmobility totalCO2Emission 449.0208150979
+scalar Network.V[35].appl "Duplicate Messages" 14
+scalar Network.V[35].appl "Original Messages" 20
+scalar Network.V[35].appl "Plist Message" 107
+scalar Network.V[35].appl "Full CRL Recieved Time" 188.49705155207
+scalar Network.V[35].nic.phy80211p busyTime 0.19392395876298
+scalar Network.V[35].nic.mac1609_4 ReceivedUnicastPackets 107
+scalar Network.V[35].nic.mac1609_4 ReceivedBroadcasts 4190
+scalar Network.V[35].nic.mac1609_4 SentPackets 329
+scalar Network.V[35].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[35].nic.mac1609_4 SNIRLostPackets 7369
+scalar Network.V[35].nic.mac1609_4 RXTXLostPackets 25
+scalar Network.V[35].nic.mac1609_4 TotalLostPackets 7394
+scalar Network.V[35].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[35].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[35].nic.mac1609_4 TimesIntoBackoff 367
+scalar Network.V[35].nic.mac1609_4 SlotsBackoff 515
+scalar Network.V[35].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[35].nic.mac1609_4 totalBusyTime 36.452537
+scalar Network.V[35].veinsmobility startTime 106
+scalar Network.V[35].veinsmobility totalTime 194
+scalar Network.V[35].veinsmobility stopTime 300
+scalar Network.V[35].veinsmobility minSpeed 3.828069966125
+scalar Network.V[35].veinsmobility maxSpeed 13.999447956108
+scalar Network.V[35].veinsmobility totalDistance 2614.7718950494
+scalar Network.V[35].veinsmobility totalCO2Emission 441.27810374061
+scalar Network.V[36].appl "Duplicate Messages" 14
+scalar Network.V[36].appl "Original Messages" 20
+scalar Network.V[36].appl "Plist Message" 62
+scalar Network.V[36].appl "Full CRL Recieved Time" 188.49705164683
+scalar Network.V[36].nic.phy80211p busyTime 0.19701608376973
+scalar Network.V[36].nic.mac1609_4 ReceivedUnicastPackets 62
+scalar Network.V[36].nic.mac1609_4 ReceivedBroadcasts 4021
+scalar Network.V[36].nic.mac1609_4 SentPackets 270
+scalar Network.V[36].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[36].nic.mac1609_4 SNIRLostPackets 7535
+scalar Network.V[36].nic.mac1609_4 RXTXLostPackets 4
+scalar Network.V[36].nic.mac1609_4 TotalLostPackets 7539
+scalar Network.V[36].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[36].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[36].nic.mac1609_4 TimesIntoBackoff 291
+scalar Network.V[36].nic.mac1609_4 SlotsBackoff 411
+scalar Network.V[36].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[36].nic.mac1609_4 totalBusyTime 36.293646
+scalar Network.V[36].veinsmobility startTime 109
+scalar Network.V[36].veinsmobility totalTime 191
+scalar Network.V[36].veinsmobility stopTime 300
+scalar Network.V[36].veinsmobility minSpeed 3.9549282409494
+scalar Network.V[36].veinsmobility maxSpeed 13.999050881448
+scalar Network.V[36].veinsmobility totalDistance 2576.8257982605
+scalar Network.V[36].veinsmobility totalCO2Emission 435.62594371875
+scalar Network.V[37].appl "Duplicate Messages" 33
+scalar Network.V[37].appl "Original Messages" 20
+scalar Network.V[37].appl "Plist Message" 36
+scalar Network.V[37].appl "Full CRL Recieved Time" 208.51472677039
+scalar Network.V[37].nic.phy80211p busyTime 0.2053119574469
+scalar Network.V[37].nic.mac1609_4 ReceivedUnicastPackets 36
+scalar Network.V[37].nic.mac1609_4 ReceivedBroadcasts 3993
+scalar Network.V[37].nic.mac1609_4 SentPackets 290
+scalar Network.V[37].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[37].nic.mac1609_4 SNIRLostPackets 8012
+scalar Network.V[37].nic.mac1609_4 RXTXLostPackets 17
+scalar Network.V[37].nic.mac1609_4 TotalLostPackets 8029
+scalar Network.V[37].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[37].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[37].nic.mac1609_4 TimesIntoBackoff 341
+scalar Network.V[37].nic.mac1609_4 SlotsBackoff 509
+scalar Network.V[37].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[37].nic.mac1609_4 totalBusyTime 37.35789
+scalar Network.V[37].veinsmobility startTime 112
+scalar Network.V[37].veinsmobility totalTime 188
+scalar Network.V[37].veinsmobility stopTime 300
+scalar Network.V[37].veinsmobility minSpeed 4.0468560271259
+scalar Network.V[37].veinsmobility maxSpeed 13.99930684353
+scalar Network.V[37].veinsmobility totalDistance 2516.2814500721
+scalar Network.V[37].veinsmobility totalCO2Emission 427.53926168391
+scalar Network.V[38].appl "Duplicate Messages" 32
+scalar Network.V[38].appl "Original Messages" 20
+scalar Network.V[38].appl "Plist Message" 68
+scalar Network.V[38].appl "Full CRL Recieved Time" 208.5147266655
+scalar Network.V[38].nic.phy80211p busyTime 0.20620038918928
+scalar Network.V[38].nic.mac1609_4 ReceivedUnicastPackets 68
+scalar Network.V[38].nic.mac1609_4 ReceivedBroadcasts 4006
+scalar Network.V[38].nic.mac1609_4 SentPackets 282
+scalar Network.V[38].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[38].nic.mac1609_4 SNIRLostPackets 8065
+scalar Network.V[38].nic.mac1609_4 RXTXLostPackets 52
+scalar Network.V[38].nic.mac1609_4 TotalLostPackets 8117
+scalar Network.V[38].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[38].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[38].nic.mac1609_4 TimesIntoBackoff 383
+scalar Network.V[38].nic.mac1609_4 SlotsBackoff 542
+scalar Network.V[38].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[38].nic.mac1609_4 totalBusyTime 37.008698
+scalar Network.V[38].veinsmobility startTime 115
+scalar Network.V[38].veinsmobility totalTime 185
+scalar Network.V[38].veinsmobility stopTime 300
+scalar Network.V[38].veinsmobility minSpeed 4.2921992871535
+scalar Network.V[38].veinsmobility maxSpeed 13.999734012587
+scalar Network.V[38].veinsmobility totalDistance 2482.744690984
+scalar Network.V[38].veinsmobility totalCO2Emission 422.1346279664
+scalar Network.V[39].appl "Duplicate Messages" 17
+scalar Network.V[39].appl "Original Messages" 20
+scalar Network.V[39].appl "Plist Message" 40
+scalar Network.V[39].appl "Full CRL Recieved Time" 208.51472650701
+scalar Network.V[39].nic.phy80211p busyTime 0.20422989010998
+scalar Network.V[39].nic.mac1609_4 ReceivedUnicastPackets 40
+scalar Network.V[39].nic.mac1609_4 ReceivedBroadcasts 3931
+scalar Network.V[39].nic.mac1609_4 SentPackets 365
+scalar Network.V[39].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[39].nic.mac1609_4 SNIRLostPackets 7831
+scalar Network.V[39].nic.mac1609_4 RXTXLostPackets 34
+scalar Network.V[39].nic.mac1609_4 TotalLostPackets 7865
+scalar Network.V[39].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[39].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[39].nic.mac1609_4 TimesIntoBackoff 402
+scalar Network.V[39].nic.mac1609_4 SlotsBackoff 650
+scalar Network.V[39].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[39].nic.mac1609_4 totalBusyTime 36.365397002558
+scalar Network.V[39].veinsmobility startTime 118
+scalar Network.V[39].veinsmobility totalTime 182
+scalar Network.V[39].veinsmobility stopTime 300
+scalar Network.V[39].veinsmobility minSpeed 4.099163855175
+scalar Network.V[39].veinsmobility maxSpeed 13.999926685586
+scalar Network.V[39].veinsmobility totalDistance 2424.0341311243
+scalar Network.V[39].veinsmobility totalCO2Emission 407.90721208981
+scalar Network.V[40].appl "Duplicate Messages" 12
+scalar Network.V[40].appl "Original Messages" 20
+scalar Network.V[40].appl "Plist Message" 351
+scalar Network.V[40].appl "Full CRL Recieved Time" 208.5179234499
+scalar Network.V[40].nic.phy80211p busyTime 0.18433309497214
+scalar Network.V[40].nic.mac1609_4 ReceivedUnicastPackets 351
+scalar Network.V[40].nic.mac1609_4 ReceivedBroadcasts 3824
+scalar Network.V[40].nic.mac1609_4 SentPackets 1412
+scalar Network.V[40].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[40].nic.mac1609_4 SNIRLostPackets 7864
+scalar Network.V[40].nic.mac1609_4 RXTXLostPackets 101
+scalar Network.V[40].nic.mac1609_4 TotalLostPackets 7965
+scalar Network.V[40].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[40].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[40].nic.mac1609_4 TimesIntoBackoff 1433
+scalar Network.V[40].nic.mac1609_4 SlotsBackoff 2136
+scalar Network.V[40].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[40].nic.mac1609_4 totalBusyTime 35.562612008228
+scalar Network.V[40].veinsmobility startTime 121
+scalar Network.V[40].veinsmobility totalTime 179
+scalar Network.V[40].veinsmobility stopTime 300
+scalar Network.V[40].veinsmobility minSpeed 3.9084870939956
+scalar Network.V[40].veinsmobility maxSpeed 13.999953481075
+scalar Network.V[40].veinsmobility totalDistance 2388.3645388922
+scalar Network.V[40].veinsmobility totalCO2Emission 406.97517797609
+scalar Network.V[41].appl "Duplicate Messages" 12
+scalar Network.V[41].appl "Original Messages" 20
+scalar Network.V[41].appl "Plist Message" 135
+scalar Network.V[41].appl "Full CRL Recieved Time" 208.51792346168
+scalar Network.V[41].nic.phy80211p busyTime 0.20790922727281
+scalar Network.V[41].nic.mac1609_4 ReceivedUnicastPackets 135
+scalar Network.V[41].nic.mac1609_4 ReceivedBroadcasts 3756
+scalar Network.V[41].nic.mac1609_4 SentPackets 370
+scalar Network.V[41].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[41].nic.mac1609_4 SNIRLostPackets 8019
+scalar Network.V[41].nic.mac1609_4 RXTXLostPackets 26
+scalar Network.V[41].nic.mac1609_4 TotalLostPackets 8045
+scalar Network.V[41].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[41].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[41].nic.mac1609_4 TimesIntoBackoff 404
+scalar Network.V[41].nic.mac1609_4 SlotsBackoff 598
+scalar Network.V[41].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[41].nic.mac1609_4 totalBusyTime 35.71037527735
+scalar Network.V[41].veinsmobility startTime 124
+scalar Network.V[41].veinsmobility totalTime 176
+scalar Network.V[41].veinsmobility stopTime 300
+scalar Network.V[41].veinsmobility minSpeed 4.076561782019
+scalar Network.V[41].veinsmobility maxSpeed 13.99996162056
+scalar Network.V[41].veinsmobility totalDistance 2355.3573133897
+scalar Network.V[41].veinsmobility totalCO2Emission 405.62477230053
+scalar Network.V[42].appl "Duplicate Messages" 12
+scalar Network.V[42].appl "Original Messages" 20
+scalar Network.V[42].appl "Plist Message" 174
+scalar Network.V[42].appl "Full CRL Recieved Time" 208.51792355346
+scalar Network.V[42].nic.phy80211p busyTime 0.20592476300586
+scalar Network.V[42].nic.mac1609_4 ReceivedUnicastPackets 174
+scalar Network.V[42].nic.mac1609_4 ReceivedBroadcasts 3649
+scalar Network.V[42].nic.mac1609_4 SentPackets 608
+scalar Network.V[42].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[42].nic.mac1609_4 SNIRLostPackets 7490
+scalar Network.V[42].nic.mac1609_4 RXTXLostPackets 21
+scalar Network.V[42].nic.mac1609_4 TotalLostPackets 7511
+scalar Network.V[42].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[42].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[42].nic.mac1609_4 TimesIntoBackoff 636
+scalar Network.V[42].nic.mac1609_4 SlotsBackoff 934
+scalar Network.V[42].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[42].nic.mac1609_4 totalBusyTime 35.59572
+scalar Network.V[42].veinsmobility startTime 127
+scalar Network.V[42].veinsmobility totalTime 173
+scalar Network.V[42].veinsmobility stopTime 300
+scalar Network.V[42].veinsmobility minSpeed 3.9824005470828
+scalar Network.V[42].veinsmobility maxSpeed 13.999635570813
+scalar Network.V[42].veinsmobility totalDistance 2311.9330942229
+scalar Network.V[42].veinsmobility totalCO2Emission 392.72069718057
+scalar Network.V[43].appl "Duplicate Messages" 12
+scalar Network.V[43].appl "Original Messages" 20
+scalar Network.V[43].appl "Plist Message" 52
+scalar Network.V[43].appl "Full CRL Recieved Time" 208.51792366741
+scalar Network.V[43].nic.phy80211p busyTime 0.2132596235295
+scalar Network.V[43].nic.mac1609_4 ReceivedUnicastPackets 52
+scalar Network.V[43].nic.mac1609_4 ReceivedBroadcasts 3531
+scalar Network.V[43].nic.mac1609_4 SentPackets 426
+scalar Network.V[43].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[43].nic.mac1609_4 SNIRLostPackets 7193
+scalar Network.V[43].nic.mac1609_4 RXTXLostPackets 58
+scalar Network.V[43].nic.mac1609_4 TotalLostPackets 7251
+scalar Network.V[43].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[43].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[43].nic.mac1609_4 TimesIntoBackoff 472
+scalar Network.V[43].nic.mac1609_4 SlotsBackoff 725
+scalar Network.V[43].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[43].nic.mac1609_4 totalBusyTime 35.413234
+scalar Network.V[43].veinsmobility startTime 130
+scalar Network.V[43].veinsmobility totalTime 170
+scalar Network.V[43].veinsmobility stopTime 300
+scalar Network.V[43].veinsmobility minSpeed 3.8414571175372
+scalar Network.V[43].veinsmobility maxSpeed 13.999531805476
+scalar Network.V[43].veinsmobility totalDistance 2271.5346399985
+scalar Network.V[43].veinsmobility totalCO2Emission 387.42748197535
+scalar Network.V[44].appl "Duplicate Messages" 27
+scalar Network.V[44].appl "Original Messages" 20
+scalar Network.V[44].appl "Plist Message" 77
+scalar Network.V[44].appl "Full CRL Recieved Time" 228.48730476118
+scalar Network.V[44].nic.phy80211p busyTime 0.21312641916176
+scalar Network.V[44].nic.mac1609_4 ReceivedUnicastPackets 77
+scalar Network.V[44].nic.mac1609_4 ReceivedBroadcasts 3360
+scalar Network.V[44].nic.mac1609_4 SentPackets 646
+scalar Network.V[44].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[44].nic.mac1609_4 SNIRLostPackets 7466
+scalar Network.V[44].nic.mac1609_4 RXTXLostPackets 58
+scalar Network.V[44].nic.mac1609_4 TotalLostPackets 7524
+scalar Network.V[44].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[44].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[44].nic.mac1609_4 TimesIntoBackoff 662
+scalar Network.V[44].nic.mac1609_4 SlotsBackoff 995
+scalar Network.V[44].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[44].nic.mac1609_4 totalBusyTime 35.419302008026
+scalar Network.V[44].veinsmobility startTime 133
+scalar Network.V[44].veinsmobility totalTime 167
+scalar Network.V[44].veinsmobility stopTime 300
+scalar Network.V[44].veinsmobility minSpeed 4.0076643208797
+scalar Network.V[44].veinsmobility maxSpeed 13.998856889885
+scalar Network.V[44].veinsmobility totalDistance 2224.5167943213
+scalar Network.V[44].veinsmobility totalCO2Emission 384.80651549659
+scalar Network.V[45].appl "Duplicate Messages" 25
+scalar Network.V[45].appl "Original Messages" 20
+scalar Network.V[45].appl "Plist Message" 39
+scalar Network.V[45].appl "Full CRL Recieved Time" 228.49077781789
+scalar Network.V[45].nic.phy80211p busyTime 0.22522839024399
+scalar Network.V[45].nic.mac1609_4 ReceivedUnicastPackets 39
+scalar Network.V[45].nic.mac1609_4 ReceivedBroadcasts 3287
+scalar Network.V[45].nic.mac1609_4 SentPackets 315
+scalar Network.V[45].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[45].nic.mac1609_4 SNIRLostPackets 7590
+scalar Network.V[45].nic.mac1609_4 RXTXLostPackets 69
+scalar Network.V[45].nic.mac1609_4 TotalLostPackets 7659
+scalar Network.V[45].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[45].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[45].nic.mac1609_4 TimesIntoBackoff 408
+scalar Network.V[45].nic.mac1609_4 SlotsBackoff 645
+scalar Network.V[45].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[45].nic.mac1609_4 totalBusyTime 35.724299131667
+scalar Network.V[45].veinsmobility startTime 136
+scalar Network.V[45].veinsmobility totalTime 164
+scalar Network.V[45].veinsmobility stopTime 300
+scalar Network.V[45].veinsmobility minSpeed 4.2020141742253
+scalar Network.V[45].veinsmobility maxSpeed 13.999943969664
+scalar Network.V[45].veinsmobility totalDistance 2190.4613783044
+scalar Network.V[45].veinsmobility totalCO2Emission 381.52859920279
+scalar Network.V[46].appl "Duplicate Messages" 12
+scalar Network.V[46].appl "Original Messages" 20
+scalar Network.V[46].appl "Plist Message" 87
+scalar Network.V[46].appl "Full CRL Recieved Time" 228.49077767012
+scalar Network.V[46].nic.phy80211p busyTime 0.23788988819886
+scalar Network.V[46].nic.mac1609_4 ReceivedUnicastPackets 87
+scalar Network.V[46].nic.mac1609_4 ReceivedBroadcasts 3117
+scalar Network.V[46].nic.mac1609_4 SentPackets 325
+scalar Network.V[46].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[46].nic.mac1609_4 SNIRLostPackets 8002
+scalar Network.V[46].nic.mac1609_4 RXTXLostPackets 10
+scalar Network.V[46].nic.mac1609_4 TotalLostPackets 8012
+scalar Network.V[46].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[46].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[46].nic.mac1609_4 TimesIntoBackoff 400
+scalar Network.V[46].nic.mac1609_4 SlotsBackoff 600
+scalar Network.V[46].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[46].nic.mac1609_4 totalBusyTime 36.844733
+scalar Network.V[46].veinsmobility startTime 139
+scalar Network.V[46].veinsmobility totalTime 161
+scalar Network.V[46].veinsmobility stopTime 300
+scalar Network.V[46].veinsmobility minSpeed 3.9728593152307
+scalar Network.V[46].veinsmobility maxSpeed 13.999837429631
+scalar Network.V[46].veinsmobility totalDistance 2132.4874267232
+scalar Network.V[46].veinsmobility totalCO2Emission 366.26565259674
+scalar Network.V[47].appl "Duplicate Messages" 15
+scalar Network.V[47].appl "Original Messages" 20
+scalar Network.V[47].appl "Plist Message" 85
+scalar Network.V[47].appl "Full CRL Recieved Time" 228.50674979093
+scalar Network.V[47].nic.phy80211p busyTime 0.25306369620264
+scalar Network.V[47].nic.mac1609_4 ReceivedUnicastPackets 85
+scalar Network.V[47].nic.mac1609_4 ReceivedBroadcasts 3071
+scalar Network.V[47].nic.mac1609_4 SentPackets 244
+scalar Network.V[47].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[47].nic.mac1609_4 SNIRLostPackets 6738
+scalar Network.V[47].nic.mac1609_4 RXTXLostPackets 3
+scalar Network.V[47].nic.mac1609_4 TotalLostPackets 6741
+scalar Network.V[47].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[47].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[47].nic.mac1609_4 TimesIntoBackoff 253
+scalar Network.V[47].nic.mac1609_4 SlotsBackoff 372
+scalar Network.V[47].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[47].nic.mac1609_4 totalBusyTime 37.930684234122
+scalar Network.V[47].veinsmobility startTime 142
+scalar Network.V[47].veinsmobility totalTime 158
+scalar Network.V[47].veinsmobility stopTime 300
+scalar Network.V[47].veinsmobility minSpeed 3.8298766437329
+scalar Network.V[47].veinsmobility maxSpeed 13.999388369587
+scalar Network.V[47].veinsmobility totalDistance 2003.4272469415
+scalar Network.V[47].veinsmobility totalCO2Emission 348.16361431856
+scalar Network.V[48].appl "Duplicate Messages" 15
+scalar Network.V[48].appl "Original Messages" 20
+scalar Network.V[48].appl "Plist Message" 56
+scalar Network.V[48].appl "Full CRL Recieved Time" 228.50674987232
+scalar Network.V[48].nic.phy80211p busyTime 0.25381883870978
+scalar Network.V[48].nic.mac1609_4 ReceivedUnicastPackets 56
+scalar Network.V[48].nic.mac1609_4 ReceivedBroadcasts 3081
+scalar Network.V[48].nic.mac1609_4 SentPackets 356
+scalar Network.V[48].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[48].nic.mac1609_4 SNIRLostPackets 6153
+scalar Network.V[48].nic.mac1609_4 RXTXLostPackets 22
+scalar Network.V[48].nic.mac1609_4 TotalLostPackets 6175
+scalar Network.V[48].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[48].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[48].nic.mac1609_4 TimesIntoBackoff 383
+scalar Network.V[48].nic.mac1609_4 SlotsBackoff 591
+scalar Network.V[48].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[48].nic.mac1609_4 totalBusyTime 37.638149044716
+scalar Network.V[48].veinsmobility startTime 145
+scalar Network.V[48].veinsmobility totalTime 155
+scalar Network.V[48].veinsmobility stopTime 300
+scalar Network.V[48].veinsmobility minSpeed 4.0897017584328
+scalar Network.V[48].veinsmobility maxSpeed 13.999121567754
+scalar Network.V[48].veinsmobility totalDistance 1987.8324498116
+scalar Network.V[48].veinsmobility totalCO2Emission 347.06767408756
+scalar Network.V[49].appl "Duplicate Messages" 14
+scalar Network.V[49].appl "Original Messages" 20
+scalar Network.V[49].appl "Plist Message" 41
+scalar Network.V[49].appl "Full CRL Recieved Time" 228.50674994823
+scalar Network.V[49].nic.phy80211p busyTime 0.25383773684221
+scalar Network.V[49].nic.mac1609_4 ReceivedUnicastPackets 41
+scalar Network.V[49].nic.mac1609_4 ReceivedBroadcasts 3072
+scalar Network.V[49].nic.mac1609_4 SentPackets 242
+scalar Network.V[49].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[49].nic.mac1609_4 SNIRLostPackets 5739
+scalar Network.V[49].nic.mac1609_4 RXTXLostPackets 61
+scalar Network.V[49].nic.mac1609_4 TotalLostPackets 5800
+scalar Network.V[49].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[49].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[49].nic.mac1609_4 TimesIntoBackoff 300
+scalar Network.V[49].nic.mac1609_4 SlotsBackoff 428
+scalar Network.V[49].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[49].nic.mac1609_4 totalBusyTime 36.718057202464
+scalar Network.V[49].veinsmobility startTime 148
+scalar Network.V[49].veinsmobility totalTime 152
+scalar Network.V[49].veinsmobility stopTime 300
+scalar Network.V[49].veinsmobility minSpeed 4.0822673356419
+scalar Network.V[49].veinsmobility maxSpeed 13.999474129106
+scalar Network.V[49].veinsmobility totalDistance 1961.90876704
+scalar Network.V[49].veinsmobility totalCO2Emission 345.80995702273
+scalar Network.V[50].appl "Duplicate Messages" 14
+scalar Network.V[50].appl "Original Messages" 20
+scalar Network.V[50].appl "Plist Message" 69
+scalar Network.V[50].appl "Full CRL Recieved Time" 228.50675000518
+scalar Network.V[50].nic.phy80211p busyTime 0.2494084295303
+scalar Network.V[50].nic.mac1609_4 ReceivedUnicastPackets 69
+scalar Network.V[50].nic.mac1609_4 ReceivedBroadcasts 3031
+scalar Network.V[50].nic.mac1609_4 SentPackets 404
+scalar Network.V[50].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[50].nic.mac1609_4 SNIRLostPackets 5317
+scalar Network.V[50].nic.mac1609_4 RXTXLostPackets 59
+scalar Network.V[50].nic.mac1609_4 TotalLostPackets 5376
+scalar Network.V[50].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[50].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[50].nic.mac1609_4 TimesIntoBackoff 419
+scalar Network.V[50].nic.mac1609_4 SlotsBackoff 619
+scalar Network.V[50].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[50].nic.mac1609_4 totalBusyTime 35.964159651342
+scalar Network.V[50].veinsmobility startTime 151
+scalar Network.V[50].veinsmobility totalTime 149
+scalar Network.V[50].veinsmobility stopTime 300
+scalar Network.V[50].veinsmobility minSpeed 4.1418937353608
+scalar Network.V[50].veinsmobility maxSpeed 13.99897103823
+scalar Network.V[50].veinsmobility totalDistance 1935.393491095
+scalar Network.V[50].veinsmobility totalCO2Emission 340.90019171225
+scalar Network.V[51].appl "Duplicate Messages" 13
+scalar Network.V[51].appl "Original Messages" 20
+scalar Network.V[51].appl "Plist Message" 385
+scalar Network.V[51].appl "Full CRL Recieved Time" 228.50675005137
+scalar Network.V[51].nic.phy80211p busyTime 0.24132005479461
+scalar Network.V[51].nic.mac1609_4 ReceivedUnicastPackets 385
+scalar Network.V[51].nic.mac1609_4 ReceivedBroadcasts 2997
+scalar Network.V[51].nic.mac1609_4 SentPackets 851
+scalar Network.V[51].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[51].nic.mac1609_4 SNIRLostPackets 5000
+scalar Network.V[51].nic.mac1609_4 RXTXLostPackets 95
+scalar Network.V[51].nic.mac1609_4 TotalLostPackets 5095
+scalar Network.V[51].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[51].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[51].nic.mac1609_4 TimesIntoBackoff 872
+scalar Network.V[51].nic.mac1609_4 SlotsBackoff 1308
+scalar Network.V[51].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[51].nic.mac1609_4 totalBusyTime 35.493123780775
+scalar Network.V[51].veinsmobility startTime 154
+scalar Network.V[51].veinsmobility totalTime 146
+scalar Network.V[51].veinsmobility stopTime 300
+scalar Network.V[51].veinsmobility minSpeed 3.9558952104144
+scalar Network.V[51].veinsmobility maxSpeed 13.997208599222
+scalar Network.V[51].veinsmobility totalDistance 1908.5641644474
+scalar Network.V[51].veinsmobility totalCO2Emission 338.6381139163
+scalar Network.V[52].appl "Duplicate Messages" 12
+scalar Network.V[52].appl "Original Messages" 20
+scalar Network.V[52].appl "Plist Message" 93
+scalar Network.V[52].appl "Full CRL Recieved Time" 228.50675011154
+scalar Network.V[52].nic.phy80211p busyTime 0.24980732867142
+scalar Network.V[52].nic.mac1609_4 ReceivedUnicastPackets 93
+scalar Network.V[52].nic.mac1609_4 ReceivedBroadcasts 2968
+scalar Network.V[52].nic.mac1609_4 SentPackets 465
+scalar Network.V[52].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[52].nic.mac1609_4 SNIRLostPackets 4738
+scalar Network.V[52].nic.mac1609_4 RXTXLostPackets 23
+scalar Network.V[52].nic.mac1609_4 TotalLostPackets 4761
+scalar Network.V[52].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[52].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[52].nic.mac1609_4 TimesIntoBackoff 497
+scalar Network.V[52].nic.mac1609_4 SlotsBackoff 713
+scalar Network.V[52].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[52].nic.mac1609_4 totalBusyTime 34.761046908452
+scalar Network.V[52].veinsmobility startTime 157
+scalar Network.V[52].veinsmobility totalTime 143
+scalar Network.V[52].veinsmobility stopTime 300
+scalar Network.V[52].veinsmobility minSpeed 3.894362128734
+scalar Network.V[52].veinsmobility maxSpeed 13.999630116643
+scalar Network.V[52].veinsmobility totalDistance 1885.7032447093
+scalar Network.V[52].veinsmobility totalCO2Emission 333.81562594349
+scalar Network.V[53].appl "Duplicate Messages" 7
+scalar Network.V[53].appl "Original Messages" 20
+scalar Network.V[53].appl "Plist Message" 57
+scalar Network.V[53].appl "Full CRL Recieved Time" 248.48104260044
+scalar Network.V[53].nic.phy80211p busyTime 0.25984702857153
+scalar Network.V[53].nic.mac1609_4 ReceivedUnicastPackets 57
+scalar Network.V[53].nic.mac1609_4 ReceivedBroadcasts 2884
+scalar Network.V[53].nic.mac1609_4 SentPackets 308
+scalar Network.V[53].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[53].nic.mac1609_4 SNIRLostPackets 4839
+scalar Network.V[53].nic.mac1609_4 RXTXLostPackets 14
+scalar Network.V[53].nic.mac1609_4 TotalLostPackets 4853
+scalar Network.V[53].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[53].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[53].nic.mac1609_4 TimesIntoBackoff 352
+scalar Network.V[53].nic.mac1609_4 SlotsBackoff 496
+scalar Network.V[53].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[53].nic.mac1609_4 totalBusyTime 34.75083618165
+scalar Network.V[53].veinsmobility startTime 160
+scalar Network.V[53].veinsmobility totalTime 140
+scalar Network.V[53].veinsmobility stopTime 300
+scalar Network.V[53].veinsmobility minSpeed 4.0435997821582
+scalar Network.V[53].veinsmobility maxSpeed 13.999317871882
+scalar Network.V[53].veinsmobility totalDistance 1843.4397860373
+scalar Network.V[53].veinsmobility totalCO2Emission 329.15333058099
+scalar Network.V[54].appl "Duplicate Messages" 7
+scalar Network.V[54].appl "Original Messages" 20
+scalar Network.V[54].appl "Plist Message" 162
+scalar Network.V[54].appl "Full CRL Recieved Time" 248.48104258792
+scalar Network.V[54].nic.phy80211p busyTime 0.24286230656943
+scalar Network.V[54].nic.mac1609_4 ReceivedUnicastPackets 162
+scalar Network.V[54].nic.mac1609_4 ReceivedBroadcasts 2816
+scalar Network.V[54].nic.mac1609_4 SentPackets 984
+scalar Network.V[54].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[54].nic.mac1609_4 SNIRLostPackets 4377
+scalar Network.V[54].nic.mac1609_4 RXTXLostPackets 107
+scalar Network.V[54].nic.mac1609_4 TotalLostPackets 4484
+scalar Network.V[54].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[54].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[54].nic.mac1609_4 TimesIntoBackoff 1016
+scalar Network.V[54].nic.mac1609_4 SlotsBackoff 1528
+scalar Network.V[54].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[54].nic.mac1609_4 totalBusyTime 34.139581
+scalar Network.V[54].veinsmobility startTime 163
+scalar Network.V[54].veinsmobility totalTime 137
+scalar Network.V[54].veinsmobility stopTime 300
+scalar Network.V[54].veinsmobility minSpeed 3.8368940664504
+scalar Network.V[54].veinsmobility maxSpeed 13.996823755521
+scalar Network.V[54].veinsmobility totalDistance 1808.9422844453
+scalar Network.V[54].veinsmobility totalCO2Emission 319.67256875886
+scalar Network.V[55].appl "Duplicate Messages" 8
+scalar Network.V[55].appl "Original Messages" 20
+scalar Network.V[55].appl "Plist Message" 254
+scalar Network.V[55].appl "Full CRL Recieved Time" 248.48104263755
+scalar Network.V[55].nic.phy80211p busyTime 0.24021092537321
+scalar Network.V[55].nic.mac1609_4 ReceivedUnicastPackets 254
+scalar Network.V[55].nic.mac1609_4 ReceivedBroadcasts 2779
+scalar Network.V[55].nic.mac1609_4 SentPackets 1164
+scalar Network.V[55].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[55].nic.mac1609_4 SNIRLostPackets 3831
+scalar Network.V[55].nic.mac1609_4 RXTXLostPackets 67
+scalar Network.V[55].nic.mac1609_4 TotalLostPackets 3898
+scalar Network.V[55].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[55].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[55].nic.mac1609_4 TimesIntoBackoff 1188
+scalar Network.V[55].nic.mac1609_4 SlotsBackoff 1809
+scalar Network.V[55].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[55].nic.mac1609_4 totalBusyTime 33.638612727739
+scalar Network.V[55].veinsmobility startTime 166
+scalar Network.V[55].veinsmobility totalTime 134
+scalar Network.V[55].veinsmobility stopTime 300
+scalar Network.V[55].veinsmobility minSpeed 3.9559695225127
+scalar Network.V[55].veinsmobility maxSpeed 13.999723644319
+scalar Network.V[55].veinsmobility totalDistance 1774.7737320932
+scalar Network.V[55].veinsmobility totalCO2Emission 321.15034950572
+scalar Network.V[56].appl "Duplicate Messages" 0
+scalar Network.V[56].appl "Original Messages" 20
+scalar Network.V[56].appl "Plist Message" 102
+scalar Network.V[56].appl "Full CRL Recieved Time" 248.51643386129
+scalar Network.V[56].nic.phy80211p busyTime 0.26160879389322
+scalar Network.V[56].nic.mac1609_4 ReceivedUnicastPackets 102
+scalar Network.V[56].nic.mac1609_4 ReceivedBroadcasts 2653
+scalar Network.V[56].nic.mac1609_4 SentPackets 233
+scalar Network.V[56].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[56].nic.mac1609_4 SNIRLostPackets 2611
+scalar Network.V[56].nic.mac1609_4 RXTXLostPackets 14
+scalar Network.V[56].nic.mac1609_4 TotalLostPackets 2625
+scalar Network.V[56].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[56].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[56].nic.mac1609_4 TimesIntoBackoff 257
+scalar Network.V[56].nic.mac1609_4 SlotsBackoff 416
+scalar Network.V[56].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[56].nic.mac1609_4 totalBusyTime 33.12316204166
+scalar Network.V[56].veinsmobility startTime 169
+scalar Network.V[56].veinsmobility totalTime 131
+scalar Network.V[56].veinsmobility stopTime 300
+scalar Network.V[56].veinsmobility minSpeed 3.9839925711885
+scalar Network.V[56].veinsmobility maxSpeed 13.998993020959
+scalar Network.V[56].veinsmobility totalDistance 1577.2258784891
+scalar Network.V[56].veinsmobility totalCO2Emission 287.55541116679
+scalar Network.V[57].appl "Duplicate Messages" 26
+scalar Network.V[57].appl "Original Messages" 20
+scalar Network.V[57].appl "Plist Message" 458
+scalar Network.V[57].appl "Full CRL Recieved Time" 288.51283032761
+scalar Network.V[57].nic.phy80211p busyTime 0.23818206250007
+scalar Network.V[57].nic.mac1609_4 ReceivedUnicastPackets 458
+scalar Network.V[57].nic.mac1609_4 ReceivedBroadcasts 2574
+scalar Network.V[57].nic.mac1609_4 SentPackets 1244
+scalar Network.V[57].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[57].nic.mac1609_4 SNIRLostPackets 2505
+scalar Network.V[57].nic.mac1609_4 RXTXLostPackets 126
+scalar Network.V[57].nic.mac1609_4 TotalLostPackets 2631
+scalar Network.V[57].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[57].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[57].nic.mac1609_4 TimesIntoBackoff 1306
+scalar Network.V[57].nic.mac1609_4 SlotsBackoff 1966
+scalar Network.V[57].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[57].nic.mac1609_4 totalBusyTime 32.863933716601
+scalar Network.V[57].veinsmobility startTime 172
+scalar Network.V[57].veinsmobility totalTime 128
+scalar Network.V[57].veinsmobility stopTime 300
+scalar Network.V[57].veinsmobility minSpeed 4.0631847788148
+scalar Network.V[57].veinsmobility maxSpeed 13.996274021864
+scalar Network.V[57].veinsmobility totalDistance 1550.427612311
+scalar Network.V[57].veinsmobility totalCO2Emission 284.96551863519
+scalar Network.V[58].appl "Duplicate Messages" 25
+scalar Network.V[58].appl "Original Messages" 20
+scalar Network.V[58].appl "Plist Message" 226
+scalar Network.V[58].appl "Full CRL Recieved Time" 288.5128302395
+scalar Network.V[58].nic.phy80211p busyTime 0.26121747200008
+scalar Network.V[58].nic.mac1609_4 ReceivedUnicastPackets 226
+scalar Network.V[58].nic.mac1609_4 ReceivedBroadcasts 2522
+scalar Network.V[58].nic.mac1609_4 SentPackets 391
+scalar Network.V[58].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[58].nic.mac1609_4 SNIRLostPackets 2449
+scalar Network.V[58].nic.mac1609_4 RXTXLostPackets 52
+scalar Network.V[58].nic.mac1609_4 TotalLostPackets 2501
+scalar Network.V[58].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[58].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[58].nic.mac1609_4 TimesIntoBackoff 527
+scalar Network.V[58].nic.mac1609_4 SlotsBackoff 733
+scalar Network.V[58].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[58].nic.mac1609_4 totalBusyTime 32.249384422878
+scalar Network.V[58].veinsmobility startTime 175
+scalar Network.V[58].veinsmobility totalTime 125
+scalar Network.V[58].veinsmobility stopTime 300
+scalar Network.V[58].veinsmobility minSpeed 3.902580489948
+scalar Network.V[58].veinsmobility maxSpeed 13.998121224877
+scalar Network.V[58].veinsmobility totalDistance 1523.420405898
+scalar Network.V[58].veinsmobility totalCO2Emission 283.24850107251
+scalar Network.V[59].appl "Duplicate Messages" 30
+scalar Network.V[59].appl "Original Messages" 20
+scalar Network.V[59].appl "Plist Message" 161
+scalar Network.V[59].appl "Full CRL Recieved Time" 288.51283015036
+scalar Network.V[59].nic.phy80211p busyTime 0.23967226229515
+scalar Network.V[59].nic.mac1609_4 ReceivedUnicastPackets 161
+scalar Network.V[59].nic.mac1609_4 ReceivedBroadcasts 2480
+scalar Network.V[59].nic.mac1609_4 SentPackets 1273
+scalar Network.V[59].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[59].nic.mac1609_4 SNIRLostPackets 2327
+scalar Network.V[59].nic.mac1609_4 RXTXLostPackets 83
+scalar Network.V[59].nic.mac1609_4 TotalLostPackets 2410
+scalar Network.V[59].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[59].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[59].nic.mac1609_4 TimesIntoBackoff 1377
+scalar Network.V[59].nic.mac1609_4 SlotsBackoff 2094
+scalar Network.V[59].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[59].nic.mac1609_4 totalBusyTime 31.636705797617
+scalar Network.V[59].veinsmobility startTime 178
+scalar Network.V[59].veinsmobility totalTime 122
+scalar Network.V[59].veinsmobility stopTime 300
+scalar Network.V[59].veinsmobility minSpeed 4.0885431242836
+scalar Network.V[59].veinsmobility maxSpeed 13.988480728909
+scalar Network.V[59].veinsmobility totalDistance 1495.5505114358
+scalar Network.V[59].veinsmobility totalCO2Emission 283.72757509252
+scalar Network.V[60].appl "Duplicate Messages" 25
+scalar Network.V[60].appl "Original Messages" 20
+scalar Network.V[60].appl "Plist Message" 143
+scalar Network.V[60].appl "Full CRL Recieved Time" 288.51283007016
+scalar Network.V[60].nic.phy80211p busyTime 0.25249963025218
+scalar Network.V[60].nic.mac1609_4 ReceivedUnicastPackets 143
+scalar Network.V[60].nic.mac1609_4 ReceivedBroadcasts 2428
+scalar Network.V[60].nic.mac1609_4 SentPackets 815
+scalar Network.V[60].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[60].nic.mac1609_4 SNIRLostPackets 2249
+scalar Network.V[60].nic.mac1609_4 RXTXLostPackets 53
+scalar Network.V[60].nic.mac1609_4 TotalLostPackets 2302
+scalar Network.V[60].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[60].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[60].nic.mac1609_4 TimesIntoBackoff 844
+scalar Network.V[60].nic.mac1609_4 SlotsBackoff 1246
+scalar Network.V[60].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[60].nic.mac1609_4 totalBusyTime 30.979375040012
+scalar Network.V[60].veinsmobility startTime 181
+scalar Network.V[60].veinsmobility totalTime 119
+scalar Network.V[60].veinsmobility stopTime 300
+scalar Network.V[60].veinsmobility minSpeed 3.9269539870051
+scalar Network.V[60].veinsmobility maxSpeed 13.998091537252
+scalar Network.V[60].veinsmobility totalDistance 1471.568031849
+scalar Network.V[60].veinsmobility totalCO2Emission 274.13391303076
+scalar Network.V[61].appl "Duplicate Messages" 25
+scalar Network.V[61].appl "Original Messages" 20
+scalar Network.V[61].appl "Plist Message" 89
+scalar Network.V[61].appl "Full CRL Recieved Time" 288.51282998354
+scalar Network.V[61].nic.phy80211p busyTime 0.26977951724146
+scalar Network.V[61].nic.mac1609_4 ReceivedUnicastPackets 89
+scalar Network.V[61].nic.mac1609_4 ReceivedBroadcasts 2345
+scalar Network.V[61].nic.mac1609_4 SentPackets 239
+scalar Network.V[61].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[61].nic.mac1609_4 SNIRLostPackets 2161
+scalar Network.V[61].nic.mac1609_4 RXTXLostPackets 27
+scalar Network.V[61].nic.mac1609_4 TotalLostPackets 2188
+scalar Network.V[61].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[61].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[61].nic.mac1609_4 TimesIntoBackoff 281
+scalar Network.V[61].nic.mac1609_4 SlotsBackoff 389
+scalar Network.V[61].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[61].nic.mac1609_4 totalBusyTime 30.449897076095
+scalar Network.V[61].veinsmobility startTime 184
+scalar Network.V[61].veinsmobility totalTime 116
+scalar Network.V[61].veinsmobility stopTime 300
+scalar Network.V[61].veinsmobility minSpeed 4.0831189165961
+scalar Network.V[61].veinsmobility maxSpeed 13.99873274799
+scalar Network.V[61].veinsmobility totalDistance 1445.4700690723
+scalar Network.V[61].veinsmobility totalCO2Emission 269.66914403486
+scalar Network.V[62].appl "Duplicate Messages" 25
+scalar Network.V[62].appl "Original Messages" 20
+scalar Network.V[62].appl "Plist Message" 238
+scalar Network.V[62].appl "Full CRL Recieved Time" 288.51282990594
+scalar Network.V[62].nic.phy80211p busyTime 0.26739093805318
+scalar Network.V[62].nic.mac1609_4 ReceivedUnicastPackets 238
+scalar Network.V[62].nic.mac1609_4 ReceivedBroadcasts 2257
+scalar Network.V[62].nic.mac1609_4 SentPackets 450
+scalar Network.V[62].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[62].nic.mac1609_4 SNIRLostPackets 2109
+scalar Network.V[62].nic.mac1609_4 RXTXLostPackets 12
+scalar Network.V[62].nic.mac1609_4 TotalLostPackets 2121
+scalar Network.V[62].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[62].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[62].nic.mac1609_4 TimesIntoBackoff 480
+scalar Network.V[62].nic.mac1609_4 SlotsBackoff 704
+scalar Network.V[62].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[62].nic.mac1609_4 totalBusyTime 29.973570264416
+scalar Network.V[62].veinsmobility startTime 187
+scalar Network.V[62].veinsmobility totalTime 113
+scalar Network.V[62].veinsmobility stopTime 300
+scalar Network.V[62].veinsmobility minSpeed 3.8804163187024
+scalar Network.V[62].veinsmobility maxSpeed 13.998790889911
+scalar Network.V[62].veinsmobility totalDistance 1420.3328614537
+scalar Network.V[62].veinsmobility totalCO2Emission 264.26966931549
+scalar Network.V[63].appl "Duplicate Messages" 24
+scalar Network.V[63].appl "Original Messages" 20
+scalar Network.V[63].appl "Plist Message" 139
+scalar Network.V[63].appl "Full CRL Recieved Time" 288.51282982572
+scalar Network.V[63].nic.phy80211p busyTime 0.26567483636371
+scalar Network.V[63].nic.mac1609_4 ReceivedUnicastPackets 139
+scalar Network.V[63].nic.mac1609_4 ReceivedBroadcasts 2180
+scalar Network.V[63].nic.mac1609_4 SentPackets 557
+scalar Network.V[63].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[63].nic.mac1609_4 SNIRLostPackets 2025
+scalar Network.V[63].nic.mac1609_4 RXTXLostPackets 38
+scalar Network.V[63].nic.mac1609_4 TotalLostPackets 2063
+scalar Network.V[63].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[63].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[63].nic.mac1609_4 TimesIntoBackoff 602
+scalar Network.V[63].nic.mac1609_4 SlotsBackoff 923
+scalar Network.V[63].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[63].nic.mac1609_4 totalBusyTime 29.431725168376
+scalar Network.V[63].veinsmobility startTime 190
+scalar Network.V[63].veinsmobility totalTime 110
+scalar Network.V[63].veinsmobility stopTime 300
+scalar Network.V[63].veinsmobility minSpeed 4.1349495721361
+scalar Network.V[63].veinsmobility maxSpeed 13.996037740812
+scalar Network.V[63].veinsmobility totalDistance 1394.1729130409
+scalar Network.V[63].veinsmobility totalCO2Emission 258.15647877172
+scalar Network.V[64].appl "Duplicate Messages" 24
+scalar Network.V[64].appl "Original Messages" 20
+scalar Network.V[64].appl "Plist Message" 89
+scalar Network.V[64].appl "Full CRL Recieved Time" 288.5128297484
+scalar Network.V[64].nic.phy80211p busyTime 0.26747700934587
+scalar Network.V[64].nic.mac1609_4 ReceivedUnicastPackets 89
+scalar Network.V[64].nic.mac1609_4 ReceivedBroadcasts 2111
+scalar Network.V[64].nic.mac1609_4 SentPackets 327
+scalar Network.V[64].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[64].nic.mac1609_4 SNIRLostPackets 1987
+scalar Network.V[64].nic.mac1609_4 RXTXLostPackets 9
+scalar Network.V[64].nic.mac1609_4 TotalLostPackets 1996
+scalar Network.V[64].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[64].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[64].nic.mac1609_4 TimesIntoBackoff 345
+scalar Network.V[64].nic.mac1609_4 SlotsBackoff 502
+scalar Network.V[64].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[64].nic.mac1609_4 totalBusyTime 28.256639001211
+scalar Network.V[64].veinsmobility startTime 193
+scalar Network.V[64].veinsmobility totalTime 107
+scalar Network.V[64].veinsmobility stopTime 300
+scalar Network.V[64].veinsmobility minSpeed 4.3785919786299
+scalar Network.V[64].veinsmobility maxSpeed 13.997626674839
+scalar Network.V[64].veinsmobility totalDistance 1370.0014852885
+scalar Network.V[64].veinsmobility totalCO2Emission 261.35095652292
+scalar Network.V[65].appl "Duplicate Messages" 24
+scalar Network.V[65].appl "Original Messages" 20
+scalar Network.V[65].appl "Plist Message" 60
+scalar Network.V[65].appl "Full CRL Recieved Time" 288.51282967143
+scalar Network.V[65].nic.phy80211p busyTime 0.25972423076929
+scalar Network.V[65].nic.mac1609_4 ReceivedUnicastPackets 60
+scalar Network.V[65].nic.mac1609_4 ReceivedBroadcasts 2041
+scalar Network.V[65].nic.mac1609_4 SentPackets 196
+scalar Network.V[65].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[65].nic.mac1609_4 SNIRLostPackets 1849
+scalar Network.V[65].nic.mac1609_4 RXTXLostPackets 4
+scalar Network.V[65].nic.mac1609_4 TotalLostPackets 1853
+scalar Network.V[65].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[65].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[65].nic.mac1609_4 TimesIntoBackoff 228
+scalar Network.V[65].nic.mac1609_4 SlotsBackoff 361
+scalar Network.V[65].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[65].nic.mac1609_4 totalBusyTime 26.345788154653
+scalar Network.V[65].veinsmobility startTime 196
+scalar Network.V[65].veinsmobility totalTime 104
+scalar Network.V[65].veinsmobility stopTime 300
+scalar Network.V[65].veinsmobility minSpeed 3.8481264791193
+scalar Network.V[65].veinsmobility maxSpeed 13.998480179403
+scalar Network.V[65].veinsmobility totalDistance 1343.2190126111
+scalar Network.V[65].veinsmobility totalCO2Emission 258.08260753359
+scalar Network.V[66].appl "Duplicate Messages" 12
+scalar Network.V[66].appl "Original Messages" 19
+scalar Network.V[66].appl "Plist Message" 293
+scalar Network.V[66].appl "Full CRL Recieved Time" 0
+scalar Network.V[66].nic.phy80211p busyTime 0.23701568316836
+scalar Network.V[66].nic.mac1609_4 ReceivedUnicastPackets 293
+scalar Network.V[66].nic.mac1609_4 ReceivedBroadcasts 1974
+scalar Network.V[66].nic.mac1609_4 SentPackets 977
+scalar Network.V[66].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[66].nic.mac1609_4 SNIRLostPackets 1960
+scalar Network.V[66].nic.mac1609_4 RXTXLostPackets 48
+scalar Network.V[66].nic.mac1609_4 TotalLostPackets 2008
+scalar Network.V[66].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[66].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[66].nic.mac1609_4 TimesIntoBackoff 1006
+scalar Network.V[66].nic.mac1609_4 SlotsBackoff 1498
+scalar Network.V[66].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[66].nic.mac1609_4 totalBusyTime 25.625545
+scalar Network.V[66].veinsmobility startTime 199
+scalar Network.V[66].veinsmobility totalTime 101
+scalar Network.V[66].veinsmobility stopTime 300
+scalar Network.V[66].veinsmobility minSpeed 4.1270271831314
+scalar Network.V[66].veinsmobility maxSpeed 13.999691771043
+scalar Network.V[66].veinsmobility totalDistance 1284.0732119878
+scalar Network.V[66].veinsmobility totalCO2Emission 244.74465299592
+scalar Network.V[67].appl "Duplicate Messages" 11
+scalar Network.V[67].appl "Original Messages" 19
+scalar Network.V[67].appl "Plist Message" 119
+scalar Network.V[67].appl "Full CRL Recieved Time" 0
+scalar Network.V[67].nic.phy80211p busyTime 0.25931134693883
+scalar Network.V[67].nic.mac1609_4 ReceivedUnicastPackets 119
+scalar Network.V[67].nic.mac1609_4 ReceivedBroadcasts 1912
+scalar Network.V[67].nic.mac1609_4 SentPackets 410
+scalar Network.V[67].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[67].nic.mac1609_4 SNIRLostPackets 2113
+scalar Network.V[67].nic.mac1609_4 RXTXLostPackets 23
+scalar Network.V[67].nic.mac1609_4 TotalLostPackets 2136
+scalar Network.V[67].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[67].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[67].nic.mac1609_4 TimesIntoBackoff 420
+scalar Network.V[67].nic.mac1609_4 SlotsBackoff 606
+scalar Network.V[67].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[67].nic.mac1609_4 totalBusyTime 25.224618591418
+scalar Network.V[67].veinsmobility startTime 202
+scalar Network.V[67].veinsmobility totalTime 98
+scalar Network.V[67].veinsmobility stopTime 300
+scalar Network.V[67].veinsmobility minSpeed 3.8827336216811
+scalar Network.V[67].veinsmobility maxSpeed 13.996444349433
+scalar Network.V[67].veinsmobility totalDistance 1256.7483023516
+scalar Network.V[67].veinsmobility totalCO2Emission 241.68506514034
+scalar Network.V[68].appl "Duplicate Messages" 11
+scalar Network.V[68].appl "Original Messages" 19
+scalar Network.V[68].appl "Plist Message" 90
+scalar Network.V[68].appl "Full CRL Recieved Time" 0
+scalar Network.V[68].nic.phy80211p busyTime 0.26818492631585
+scalar Network.V[68].nic.mac1609_4 ReceivedUnicastPackets 90
+scalar Network.V[68].nic.mac1609_4 ReceivedBroadcasts 1862
+scalar Network.V[68].nic.mac1609_4 SentPackets 281
+scalar Network.V[68].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[68].nic.mac1609_4 SNIRLostPackets 2096
+scalar Network.V[68].nic.mac1609_4 RXTXLostPackets 29
+scalar Network.V[68].nic.mac1609_4 TotalLostPackets 2125
+scalar Network.V[68].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[68].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[68].nic.mac1609_4 TimesIntoBackoff 298
+scalar Network.V[68].nic.mac1609_4 SlotsBackoff 454
+scalar Network.V[68].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[68].nic.mac1609_4 totalBusyTime 24.857841
+scalar Network.V[68].veinsmobility startTime 205
+scalar Network.V[68].veinsmobility totalTime 95
+scalar Network.V[68].veinsmobility stopTime 300
+scalar Network.V[68].veinsmobility minSpeed 4.2464038236701
+scalar Network.V[68].veinsmobility maxSpeed 13.999750615878
+scalar Network.V[68].veinsmobility totalDistance 1224.7746449331
+scalar Network.V[68].veinsmobility totalCO2Emission 239.29119049178
+scalar Network.V[69].appl "Duplicate Messages" 9
+scalar Network.V[69].appl "Original Messages" 19
+scalar Network.V[69].appl "Plist Message" 108
+scalar Network.V[69].appl "Full CRL Recieved Time" 0
+scalar Network.V[69].nic.phy80211p busyTime 0.26333069565223
+scalar Network.V[69].nic.mac1609_4 ReceivedUnicastPackets 108
+scalar Network.V[69].nic.mac1609_4 ReceivedBroadcasts 1819
+scalar Network.V[69].nic.mac1609_4 SentPackets 374
+scalar Network.V[69].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[69].nic.mac1609_4 SNIRLostPackets 1939
+scalar Network.V[69].nic.mac1609_4 RXTXLostPackets 29
+scalar Network.V[69].nic.mac1609_4 TotalLostPackets 1968
+scalar Network.V[69].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[69].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[69].nic.mac1609_4 TimesIntoBackoff 380
+scalar Network.V[69].nic.mac1609_4 SlotsBackoff 560
+scalar Network.V[69].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[69].nic.mac1609_4 totalBusyTime 23.845030001042
+scalar Network.V[69].veinsmobility startTime 208
+scalar Network.V[69].veinsmobility totalTime 92
+scalar Network.V[69].veinsmobility stopTime 300
+scalar Network.V[69].veinsmobility minSpeed 4.0104934895021
+scalar Network.V[69].veinsmobility maxSpeed 13.999492238774
+scalar Network.V[69].veinsmobility totalDistance 1192.3556068366
+scalar Network.V[69].veinsmobility totalCO2Emission 234.06683239475
+scalar Network.V[70].appl "Duplicate Messages" 9
+scalar Network.V[70].appl "Original Messages" 19
+scalar Network.V[70].appl "Plist Message" 73
+scalar Network.V[70].appl "Full CRL Recieved Time" 0
+scalar Network.V[70].nic.phy80211p busyTime 0.27263253932589
+scalar Network.V[70].nic.mac1609_4 ReceivedUnicastPackets 73
+scalar Network.V[70].nic.mac1609_4 ReceivedBroadcasts 1794
+scalar Network.V[70].nic.mac1609_4 SentPackets 181
+scalar Network.V[70].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[70].nic.mac1609_4 SNIRLostPackets 1947
+scalar Network.V[70].nic.mac1609_4 RXTXLostPackets 17
+scalar Network.V[70].nic.mac1609_4 TotalLostPackets 1964
+scalar Network.V[70].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[70].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[70].nic.mac1609_4 TimesIntoBackoff 242
+scalar Network.V[70].nic.mac1609_4 SlotsBackoff 357
+scalar Network.V[70].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[70].nic.mac1609_4 totalBusyTime 23.121565
+scalar Network.V[70].veinsmobility startTime 211
+scalar Network.V[70].veinsmobility totalTime 89
+scalar Network.V[70].veinsmobility stopTime 300
+scalar Network.V[70].veinsmobility minSpeed 4.0872488125408
+scalar Network.V[70].veinsmobility maxSpeed 13.998966360344
+scalar Network.V[70].veinsmobility totalDistance 1157.3050858983
+scalar Network.V[70].veinsmobility totalCO2Emission 228.75612751176
+scalar Network.V[71].appl "Duplicate Messages" 8
+scalar Network.V[71].appl "Original Messages" 18
+scalar Network.V[71].appl "Plist Message" 194
+scalar Network.V[71].appl "Full CRL Recieved Time" 0
+scalar Network.V[71].nic.phy80211p busyTime 0.24943451162794
+scalar Network.V[71].nic.mac1609_4 ReceivedUnicastPackets 194
+scalar Network.V[71].nic.mac1609_4 ReceivedBroadcasts 1754
+scalar Network.V[71].nic.mac1609_4 SentPackets 506
+scalar Network.V[71].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[71].nic.mac1609_4 SNIRLostPackets 1831
+scalar Network.V[71].nic.mac1609_4 RXTXLostPackets 39
+scalar Network.V[71].nic.mac1609_4 TotalLostPackets 1870
+scalar Network.V[71].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[71].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[71].nic.mac1609_4 TimesIntoBackoff 514
+scalar Network.V[71].nic.mac1609_4 SlotsBackoff 804
+scalar Network.V[71].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[71].nic.mac1609_4 totalBusyTime 21.31245
+scalar Network.V[71].veinsmobility startTime 214
+scalar Network.V[71].veinsmobility totalTime 86
+scalar Network.V[71].veinsmobility stopTime 300
+scalar Network.V[71].veinsmobility minSpeed 4.0430518242415
+scalar Network.V[71].veinsmobility maxSpeed 13.999458071881
+scalar Network.V[71].veinsmobility totalDistance 1104.4997405264
+scalar Network.V[71].veinsmobility totalCO2Emission 218.86590126802
+scalar Network.V[72].appl "Duplicate Messages" 6
+scalar Network.V[72].appl "Original Messages" 18
+scalar Network.V[72].appl "Plist Message" 80
+scalar Network.V[72].appl "Full CRL Recieved Time" 0
+scalar Network.V[72].nic.phy80211p busyTime 0.25070679518075
+scalar Network.V[72].nic.mac1609_4 ReceivedUnicastPackets 80
+scalar Network.V[72].nic.mac1609_4 ReceivedBroadcasts 1705
+scalar Network.V[72].nic.mac1609_4 SentPackets 166
+scalar Network.V[72].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[72].nic.mac1609_4 SNIRLostPackets 1702
+scalar Network.V[72].nic.mac1609_4 RXTXLostPackets 28
+scalar Network.V[72].nic.mac1609_4 TotalLostPackets 1730
+scalar Network.V[72].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[72].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[72].nic.mac1609_4 TimesIntoBackoff 243
+scalar Network.V[72].nic.mac1609_4 SlotsBackoff 364
+scalar Network.V[72].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[72].nic.mac1609_4 totalBusyTime 19.70395
+scalar Network.V[72].veinsmobility startTime 217
+scalar Network.V[72].veinsmobility totalTime 83
+scalar Network.V[72].veinsmobility stopTime 300
+scalar Network.V[72].veinsmobility minSpeed 4.0383687465128
+scalar Network.V[72].veinsmobility maxSpeed 13.99740062034
+scalar Network.V[72].veinsmobility totalDistance 1067.2244883774
+scalar Network.V[72].veinsmobility totalCO2Emission 214.9483728713
+scalar Network.V[73].appl "Duplicate Messages" 0
+scalar Network.V[73].appl "Original Messages" 14
+scalar Network.V[73].appl "Plist Message" 91
+scalar Network.V[73].appl "Full CRL Recieved Time" 0
+scalar Network.V[73].nic.phy80211p busyTime 0.23287640000001
+scalar Network.V[73].nic.mac1609_4 ReceivedUnicastPackets 91
+scalar Network.V[73].nic.mac1609_4 ReceivedBroadcasts 1574
+scalar Network.V[73].nic.mac1609_4 SentPackets 214
+scalar Network.V[73].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[73].nic.mac1609_4 SNIRLostPackets 1602
+scalar Network.V[73].nic.mac1609_4 RXTXLostPackets 37
+scalar Network.V[73].nic.mac1609_4 TotalLostPackets 1639
+scalar Network.V[73].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[73].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[73].nic.mac1609_4 TimesIntoBackoff 300
+scalar Network.V[73].nic.mac1609_4 SlotsBackoff 452
+scalar Network.V[73].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[73].nic.mac1609_4 totalBusyTime 17.967566
+scalar Network.V[73].veinsmobility startTime 220
+scalar Network.V[73].veinsmobility totalTime 80
+scalar Network.V[73].veinsmobility stopTime 300
+scalar Network.V[73].veinsmobility minSpeed 3.8768080681939
+scalar Network.V[73].veinsmobility maxSpeed 13.999158718132
+scalar Network.V[73].veinsmobility totalDistance 1018.2679921679
+scalar Network.V[73].veinsmobility totalCO2Emission 205.15101105574
+scalar Network.V[74].appl "Duplicate Messages" 0
+scalar Network.V[74].appl "Original Messages" 14
+scalar Network.V[74].appl "Plist Message" 193
+scalar Network.V[74].appl "Full CRL Recieved Time" 0
+scalar Network.V[74].nic.phy80211p busyTime 0.2058429090909
+scalar Network.V[74].nic.mac1609_4 ReceivedUnicastPackets 193
+scalar Network.V[74].nic.mac1609_4 ReceivedBroadcasts 1465
+scalar Network.V[74].nic.mac1609_4 SentPackets 365
+scalar Network.V[74].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[74].nic.mac1609_4 SNIRLostPackets 1334
+scalar Network.V[74].nic.mac1609_4 RXTXLostPackets 14
+scalar Network.V[74].nic.mac1609_4 TotalLostPackets 1348
+scalar Network.V[74].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[74].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[74].nic.mac1609_4 TimesIntoBackoff 365
+scalar Network.V[74].nic.mac1609_4 SlotsBackoff 552
+scalar Network.V[74].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[74].nic.mac1609_4 totalBusyTime 15.881309
+scalar Network.V[74].veinsmobility startTime 223
+scalar Network.V[74].veinsmobility totalTime 77
+scalar Network.V[74].veinsmobility stopTime 300
+scalar Network.V[74].veinsmobility minSpeed 3.9864530684098
+scalar Network.V[74].veinsmobility maxSpeed 13.995960050011
+scalar Network.V[74].veinsmobility totalDistance 967.31069835226
+scalar Network.V[74].veinsmobility totalCO2Emission 197.85361061538
+scalar Network.V[75].appl "Duplicate Messages" 0
+scalar Network.V[75].appl "Original Messages" 14
+scalar Network.V[75].appl "Plist Message" 49
+scalar Network.V[75].appl "Full CRL Recieved Time" 0
+scalar Network.V[75].nic.phy80211p busyTime 0.21711545945945
+scalar Network.V[75].nic.mac1609_4 ReceivedUnicastPackets 49
+scalar Network.V[75].nic.mac1609_4 ReceivedBroadcasts 1383
+scalar Network.V[75].nic.mac1609_4 SentPackets 174
+scalar Network.V[75].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[75].nic.mac1609_4 SNIRLostPackets 1308
+scalar Network.V[75].nic.mac1609_4 RXTXLostPackets 4
+scalar Network.V[75].nic.mac1609_4 TotalLostPackets 1312
+scalar Network.V[75].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[75].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[75].nic.mac1609_4 TimesIntoBackoff 182
+scalar Network.V[75].nic.mac1609_4 SlotsBackoff 259
+scalar Network.V[75].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[75].nic.mac1609_4 totalBusyTime 15.546934
+scalar Network.V[75].veinsmobility startTime 226
+scalar Network.V[75].veinsmobility totalTime 74
+scalar Network.V[75].veinsmobility stopTime 300
+scalar Network.V[75].veinsmobility minSpeed 4.1200354336874
+scalar Network.V[75].veinsmobility maxSpeed 13.998795538377
+scalar Network.V[75].veinsmobility totalDistance 943.51460921696
+scalar Network.V[75].veinsmobility totalCO2Emission 182.8846992705
+scalar Network.V[76].appl "Duplicate Messages" 0
+scalar Network.V[76].appl "Original Messages" 14
+scalar Network.V[76].appl "Plist Message" 149
+scalar Network.V[76].appl "Full CRL Recieved Time" 0
+scalar Network.V[76].nic.phy80211p busyTime 0.20701239436618
+scalar Network.V[76].nic.mac1609_4 ReceivedUnicastPackets 149
+scalar Network.V[76].nic.mac1609_4 ReceivedBroadcasts 1325
+scalar Network.V[76].nic.mac1609_4 SentPackets 225
+scalar Network.V[76].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[76].nic.mac1609_4 SNIRLostPackets 1096
+scalar Network.V[76].nic.mac1609_4 RXTXLostPackets 14
+scalar Network.V[76].nic.mac1609_4 TotalLostPackets 1110
+scalar Network.V[76].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[76].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[76].nic.mac1609_4 TimesIntoBackoff 292
+scalar Network.V[76].nic.mac1609_4 SlotsBackoff 438
+scalar Network.V[76].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[76].nic.mac1609_4 totalBusyTime 14.444049
+scalar Network.V[76].veinsmobility startTime 229
+scalar Network.V[76].veinsmobility totalTime 71
+scalar Network.V[76].veinsmobility stopTime 300
+scalar Network.V[76].veinsmobility minSpeed 4.0758558492601
+scalar Network.V[76].veinsmobility maxSpeed 13.998537470067
+scalar Network.V[76].veinsmobility totalDistance 921.07531853057
+scalar Network.V[76].veinsmobility totalCO2Emission 175.79178126114
+scalar Network.V[77].appl "Duplicate Messages" 0
+scalar Network.V[77].appl "Original Messages" 17
+scalar Network.V[77].appl "Plist Message" 78
+scalar Network.V[77].appl "Full CRL Recieved Time" 0
+scalar Network.V[77].nic.phy80211p busyTime 0.19655435294116
+scalar Network.V[77].nic.mac1609_4 ReceivedUnicastPackets 78
+scalar Network.V[77].nic.mac1609_4 ReceivedBroadcasts 1241
+scalar Network.V[77].nic.mac1609_4 SentPackets 199
+scalar Network.V[77].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[77].nic.mac1609_4 SNIRLostPackets 1024
+scalar Network.V[77].nic.mac1609_4 RXTXLostPackets 4
+scalar Network.V[77].nic.mac1609_4 TotalLostPackets 1028
+scalar Network.V[77].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[77].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[77].nic.mac1609_4 TimesIntoBackoff 205
+scalar Network.V[77].nic.mac1609_4 SlotsBackoff 296
+scalar Network.V[77].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[77].nic.mac1609_4 totalBusyTime 13.105831
+scalar Network.V[77].veinsmobility startTime 232
+scalar Network.V[77].veinsmobility totalTime 68
+scalar Network.V[77].veinsmobility stopTime 300
+scalar Network.V[77].veinsmobility minSpeed 3.7816718659894
+scalar Network.V[77].veinsmobility maxSpeed 13.998669697752
+scalar Network.V[77].veinsmobility totalDistance 885.08078908469
+scalar Network.V[77].veinsmobility totalCO2Emission 172.90176506764
+scalar Network.V[78].appl "Duplicate Messages" 0
+scalar Network.V[78].appl "Original Messages" 17
+scalar Network.V[78].appl "Plist Message" 98
+scalar Network.V[78].appl "Full CRL Recieved Time" 0
+scalar Network.V[78].nic.phy80211p busyTime 0.17514806153845
+scalar Network.V[78].nic.mac1609_4 ReceivedUnicastPackets 98
+scalar Network.V[78].nic.mac1609_4 ReceivedBroadcasts 1166
+scalar Network.V[78].nic.mac1609_4 SentPackets 342
+scalar Network.V[78].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[78].nic.mac1609_4 SNIRLostPackets 849
+scalar Network.V[78].nic.mac1609_4 RXTXLostPackets 21
+scalar Network.V[78].nic.mac1609_4 TotalLostPackets 870
+scalar Network.V[78].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[78].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[78].nic.mac1609_4 TimesIntoBackoff 355
+scalar Network.V[78].nic.mac1609_4 SlotsBackoff 559
+scalar Network.V[78].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[78].nic.mac1609_4 totalBusyTime 11.710734
+scalar Network.V[78].veinsmobility startTime 235
+scalar Network.V[78].veinsmobility totalTime 65
+scalar Network.V[78].veinsmobility stopTime 300
+scalar Network.V[78].veinsmobility minSpeed 3.8772497615504
+scalar Network.V[78].veinsmobility maxSpeed 13.996034623361
+scalar Network.V[78].veinsmobility totalDistance 825.98498233691
+scalar Network.V[78].veinsmobility totalCO2Emission 160.55646716615
+scalar Network.V[79].appl "Duplicate Messages" 6
+scalar Network.V[79].appl "Original Messages" 15
+scalar Network.V[79].appl "Plist Message" 62
+scalar Network.V[79].appl "Full CRL Recieved Time" 0
+scalar Network.V[79].nic.phy80211p busyTime 0.1686473548387
+scalar Network.V[79].nic.mac1609_4 ReceivedUnicastPackets 62
+scalar Network.V[79].nic.mac1609_4 ReceivedBroadcasts 1107
+scalar Network.V[79].nic.mac1609_4 SentPackets 400
+scalar Network.V[79].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[79].nic.mac1609_4 SNIRLostPackets 755
+scalar Network.V[79].nic.mac1609_4 RXTXLostPackets 33
+scalar Network.V[79].nic.mac1609_4 TotalLostPackets 788
+scalar Network.V[79].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[79].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[79].nic.mac1609_4 TimesIntoBackoff 415
+scalar Network.V[79].nic.mac1609_4 SlotsBackoff 626
+scalar Network.V[79].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[79].nic.mac1609_4 totalBusyTime 11.043712066265
+scalar Network.V[79].veinsmobility startTime 238
+scalar Network.V[79].veinsmobility totalTime 62
+scalar Network.V[79].veinsmobility stopTime 300
+scalar Network.V[79].veinsmobility minSpeed 3.8732012177889
+scalar Network.V[79].veinsmobility maxSpeed 13.994013170744
+scalar Network.V[79].veinsmobility totalDistance 796.53399952307
+scalar Network.V[79].veinsmobility totalCO2Emission 159.56391671416
+scalar Network.V[80].appl "Duplicate Messages" 0
+scalar Network.V[80].appl "Original Messages" 0
+scalar Network.V[80].appl "Plist Message" 190
+scalar Network.V[80].appl "Full CRL Recieved Time" 0
+scalar Network.V[80].nic.phy80211p busyTime 0.17960447457626
+scalar Network.V[80].nic.mac1609_4 ReceivedUnicastPackets 190
+scalar Network.V[80].nic.mac1609_4 ReceivedBroadcasts 1004
+scalar Network.V[80].nic.mac1609_4 SentPackets 257
+scalar Network.V[80].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[80].nic.mac1609_4 SNIRLostPackets 713
+scalar Network.V[80].nic.mac1609_4 RXTXLostPackets 25
+scalar Network.V[80].nic.mac1609_4 TotalLostPackets 738
+scalar Network.V[80].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[80].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[80].nic.mac1609_4 TimesIntoBackoff 260
+scalar Network.V[80].nic.mac1609_4 SlotsBackoff 398
+scalar Network.V[80].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[80].nic.mac1609_4 totalBusyTime 10.717297
+scalar Network.V[80].veinsmobility startTime 241
+scalar Network.V[80].veinsmobility totalTime 59
+scalar Network.V[80].veinsmobility stopTime 300
+scalar Network.V[80].veinsmobility minSpeed 3.9593118368689
+scalar Network.V[80].veinsmobility maxSpeed 13.996250784346
+scalar Network.V[80].veinsmobility totalDistance 758.0994846356
+scalar Network.V[80].veinsmobility totalCO2Emission 153.2634180444
+scalar Network.V[81].appl "Duplicate Messages" 0
+scalar Network.V[81].appl "Original Messages" 0
+scalar Network.V[81].appl "Plist Message" 59
+scalar Network.V[81].appl "Full CRL Recieved Time" 0
+scalar Network.V[81].nic.phy80211p busyTime 0.16466071428571
+scalar Network.V[81].nic.mac1609_4 ReceivedUnicastPackets 59
+scalar Network.V[81].nic.mac1609_4 ReceivedBroadcasts 922
+scalar Network.V[81].nic.mac1609_4 SentPackets 128
+scalar Network.V[81].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[81].nic.mac1609_4 SNIRLostPackets 520
+scalar Network.V[81].nic.mac1609_4 RXTXLostPackets 16
+scalar Network.V[81].nic.mac1609_4 TotalLostPackets 536
+scalar Network.V[81].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[81].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[81].nic.mac1609_4 TimesIntoBackoff 177
+scalar Network.V[81].nic.mac1609_4 SlotsBackoff 247
+scalar Network.V[81].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[81].nic.mac1609_4 totalBusyTime 9.12336
+scalar Network.V[81].veinsmobility startTime 244
+scalar Network.V[81].veinsmobility totalTime 56
+scalar Network.V[81].veinsmobility stopTime 300
+scalar Network.V[81].veinsmobility minSpeed 3.8759531166408
+scalar Network.V[81].veinsmobility maxSpeed 13.997748361486
+scalar Network.V[81].veinsmobility totalDistance 707.21111487966
+scalar Network.V[81].veinsmobility totalCO2Emission 143.38850165722
+scalar Network.V[82].appl "Duplicate Messages" 0
+scalar Network.V[82].appl "Original Messages" 0
+scalar Network.V[82].appl "Plist Message" 105
+scalar Network.V[82].appl "Full CRL Recieved Time" 0
+scalar Network.V[82].nic.phy80211p busyTime 0.1630436226415
+scalar Network.V[82].nic.mac1609_4 ReceivedUnicastPackets 105
+scalar Network.V[82].nic.mac1609_4 ReceivedBroadcasts 865
+scalar Network.V[82].nic.mac1609_4 SentPackets 165
+scalar Network.V[82].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[82].nic.mac1609_4 SNIRLostPackets 529
+scalar Network.V[82].nic.mac1609_4 RXTXLostPackets 5
+scalar Network.V[82].nic.mac1609_4 TotalLostPackets 534
+scalar Network.V[82].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[82].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[82].nic.mac1609_4 TimesIntoBackoff 183
+scalar Network.V[82].nic.mac1609_4 SlotsBackoff 293
+scalar Network.V[82].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[82].nic.mac1609_4 totalBusyTime 8.659069
+scalar Network.V[82].veinsmobility startTime 247
+scalar Network.V[82].veinsmobility totalTime 53
+scalar Network.V[82].veinsmobility stopTime 300
+scalar Network.V[82].veinsmobility minSpeed 3.8216958065719
+scalar Network.V[82].veinsmobility maxSpeed 13.996719143982
+scalar Network.V[82].veinsmobility totalDistance 673.40461134921
+scalar Network.V[82].veinsmobility totalCO2Emission 140.68338832853
+scalar Network.V[83].appl "Duplicate Messages" 0
+scalar Network.V[83].appl "Original Messages" 0
+scalar Network.V[83].appl "Plist Message" 68
+scalar Network.V[83].appl "Full CRL Recieved Time" 0
+scalar Network.V[83].nic.phy80211p busyTime 0.16158687999999
+scalar Network.V[83].nic.mac1609_4 ReceivedUnicastPackets 68
+scalar Network.V[83].nic.mac1609_4 ReceivedBroadcasts 805
+scalar Network.V[83].nic.mac1609_4 SentPackets 120
+scalar Network.V[83].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[83].nic.mac1609_4 SNIRLostPackets 457
+scalar Network.V[83].nic.mac1609_4 RXTXLostPackets 2
+scalar Network.V[83].nic.mac1609_4 TotalLostPackets 459
+scalar Network.V[83].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[83].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[83].nic.mac1609_4 TimesIntoBackoff 125
+scalar Network.V[83].nic.mac1609_4 SlotsBackoff 190
+scalar Network.V[83].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[83].nic.mac1609_4 totalBusyTime 8.038575
+scalar Network.V[83].veinsmobility startTime 250
+scalar Network.V[83].veinsmobility totalTime 50
+scalar Network.V[83].veinsmobility stopTime 300
+scalar Network.V[83].veinsmobility minSpeed 3.8882583488826
+scalar Network.V[83].veinsmobility maxSpeed 13.995325394622
+scalar Network.V[83].veinsmobility totalDistance 634.66394002608
+scalar Network.V[83].veinsmobility totalCO2Emission 135.24473070762
+scalar Network.V[84].appl "Duplicate Messages" 0
+scalar Network.V[84].appl "Original Messages" 0
+scalar Network.V[84].appl "Plist Message" 47
+scalar Network.V[84].appl "Full CRL Recieved Time" 0
+scalar Network.V[84].nic.phy80211p busyTime 0.15845531914893
+scalar Network.V[84].nic.mac1609_4 ReceivedUnicastPackets 47
+scalar Network.V[84].nic.mac1609_4 ReceivedBroadcasts 745
+scalar Network.V[84].nic.mac1609_4 SentPackets 102
+scalar Network.V[84].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[84].nic.mac1609_4 SNIRLostPackets 399
+scalar Network.V[84].nic.mac1609_4 RXTXLostPackets 1
+scalar Network.V[84].nic.mac1609_4 TotalLostPackets 400
+scalar Network.V[84].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[84].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[84].nic.mac1609_4 TimesIntoBackoff 115
+scalar Network.V[84].nic.mac1609_4 SlotsBackoff 176
+scalar Network.V[84].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[84].nic.mac1609_4 totalBusyTime 7.425718
+scalar Network.V[84].veinsmobility startTime 253
+scalar Network.V[84].veinsmobility totalTime 47
+scalar Network.V[84].veinsmobility stopTime 300
+scalar Network.V[84].veinsmobility minSpeed 3.8737032484314
+scalar Network.V[84].veinsmobility maxSpeed 13.998699490346
+scalar Network.V[84].veinsmobility totalDistance 595.56093441034
+scalar Network.V[84].veinsmobility totalCO2Emission 129.85038801755
+scalar Network.V[85].appl "Duplicate Messages" 0
+scalar Network.V[85].appl "Original Messages" 0
+scalar Network.V[85].appl "Plist Message" 76
+scalar Network.V[85].appl "Full CRL Recieved Time" 0
+scalar Network.V[85].nic.phy80211p busyTime 0.15664618181817
+scalar Network.V[85].nic.mac1609_4 ReceivedUnicastPackets 76
+scalar Network.V[85].nic.mac1609_4 ReceivedBroadcasts 691
+scalar Network.V[85].nic.mac1609_4 SentPackets 122
+scalar Network.V[85].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[85].nic.mac1609_4 SNIRLostPackets 374
+scalar Network.V[85].nic.mac1609_4 RXTXLostPackets 6
+scalar Network.V[85].nic.mac1609_4 TotalLostPackets 380
+scalar Network.V[85].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[85].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[85].nic.mac1609_4 TimesIntoBackoff 123
+scalar Network.V[85].nic.mac1609_4 SlotsBackoff 171
+scalar Network.V[85].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[85].nic.mac1609_4 totalBusyTime 6.93945
+scalar Network.V[85].veinsmobility startTime 256
+scalar Network.V[85].veinsmobility totalTime 44
+scalar Network.V[85].veinsmobility stopTime 300
+scalar Network.V[85].veinsmobility minSpeed 3.9961007539942
+scalar Network.V[85].veinsmobility maxSpeed 13.996109176765
+scalar Network.V[85].veinsmobility totalDistance 550.47040357526
+scalar Network.V[85].veinsmobility totalCO2Emission 121.43121165253
+scalar Network.V[86].appl "Duplicate Messages" 0
+scalar Network.V[86].appl "Original Messages" 3
+scalar Network.V[86].appl "Plist Message" 106
+scalar Network.V[86].appl "Full CRL Recieved Time" 0
+scalar Network.V[86].nic.phy80211p busyTime 0.1558415609756
+scalar Network.V[86].nic.mac1609_4 ReceivedUnicastPackets 106
+scalar Network.V[86].nic.mac1609_4 ReceivedBroadcasts 643
+scalar Network.V[86].nic.mac1609_4 SentPackets 369
+scalar Network.V[86].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[86].nic.mac1609_4 SNIRLostPackets 457
+scalar Network.V[86].nic.mac1609_4 RXTXLostPackets 9
+scalar Network.V[86].nic.mac1609_4 TotalLostPackets 466
+scalar Network.V[86].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[86].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[86].nic.mac1609_4 TimesIntoBackoff 370
+scalar Network.V[86].nic.mac1609_4 SlotsBackoff 544
+scalar Network.V[86].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[86].nic.mac1609_4 totalBusyTime 7.175697
+scalar Network.V[86].veinsmobility startTime 259
+scalar Network.V[86].veinsmobility totalTime 41
+scalar Network.V[86].veinsmobility stopTime 300
+scalar Network.V[86].veinsmobility minSpeed 4.1158382290048
+scalar Network.V[86].veinsmobility maxSpeed 13.990123631386
+scalar Network.V[86].veinsmobility totalDistance 511.65100885886
+scalar Network.V[86].veinsmobility totalCO2Emission 117.94094394425
+scalar Network.V[87].appl "Duplicate Messages" 0
+scalar Network.V[87].appl "Original Messages" 0
+scalar Network.V[87].appl "Plist Message" 16
+scalar Network.V[87].appl "Full CRL Recieved Time" 0
+scalar Network.V[87].nic.phy80211p busyTime 0.20159557894736
+scalar Network.V[87].nic.mac1609_4 ReceivedUnicastPackets 16
+scalar Network.V[87].nic.mac1609_4 ReceivedBroadcasts 565
+scalar Network.V[87].nic.mac1609_4 SentPackets 77
+scalar Network.V[87].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[87].nic.mac1609_4 SNIRLostPackets 618
+scalar Network.V[87].nic.mac1609_4 RXTXLostPackets 16
+scalar Network.V[87].nic.mac1609_4 TotalLostPackets 634
+scalar Network.V[87].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[87].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[87].nic.mac1609_4 TimesIntoBackoff 105
+scalar Network.V[87].nic.mac1609_4 SlotsBackoff 157
+scalar Network.V[87].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[87].nic.mac1609_4 totalBusyTime 7.439717
+scalar Network.V[87].veinsmobility startTime 262
+scalar Network.V[87].veinsmobility totalTime 38
+scalar Network.V[87].veinsmobility stopTime 300
+scalar Network.V[87].veinsmobility minSpeed 3.8174475834241
+scalar Network.V[87].veinsmobility maxSpeed 13.336986548975
+scalar Network.V[87].veinsmobility totalDistance 417.81534833755
+scalar Network.V[87].veinsmobility totalCO2Emission 95.961037703337
+scalar Network.V[88].appl "Duplicate Messages" 0
+scalar Network.V[88].appl "Original Messages" 0
+scalar Network.V[88].appl "Plist Message" 72
+scalar Network.V[88].appl "Full CRL Recieved Time" 0
+scalar Network.V[88].nic.phy80211p busyTime 0.20635199999999
+scalar Network.V[88].nic.mac1609_4 ReceivedUnicastPackets 72
+scalar Network.V[88].nic.mac1609_4 ReceivedBroadcasts 527
+scalar Network.V[88].nic.mac1609_4 SentPackets 111
+scalar Network.V[88].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[88].nic.mac1609_4 SNIRLostPackets 706
+scalar Network.V[88].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[88].nic.mac1609_4 TotalLostPackets 706
+scalar Network.V[88].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[88].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[88].nic.mac1609_4 TimesIntoBackoff 124
+scalar Network.V[88].nic.mac1609_4 SlotsBackoff 188
+scalar Network.V[88].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[88].nic.mac1609_4 totalBusyTime 7.076559095796
+scalar Network.V[88].veinsmobility startTime 265
+scalar Network.V[88].veinsmobility totalTime 35
+scalar Network.V[88].veinsmobility stopTime 300
+scalar Network.V[88].veinsmobility minSpeed 3.8670085059182
+scalar Network.V[88].veinsmobility maxSpeed 13.965305031855
+scalar Network.V[88].veinsmobility totalDistance 398.27760716162
+scalar Network.V[88].veinsmobility totalCO2Emission 95.748360867797
+scalar Network.V[89].appl "Duplicate Messages" 0
+scalar Network.V[89].appl "Original Messages" 0
+scalar Network.V[89].appl "Plist Message" 60
+scalar Network.V[89].appl "Full CRL Recieved Time" 0
+scalar Network.V[89].nic.phy80211p busyTime 0.21048749999999
+scalar Network.V[89].nic.mac1609_4 ReceivedUnicastPackets 60
+scalar Network.V[89].nic.mac1609_4 ReceivedBroadcasts 480
+scalar Network.V[89].nic.mac1609_4 SentPackets 92
+scalar Network.V[89].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[89].nic.mac1609_4 SNIRLostPackets 717
+scalar Network.V[89].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[89].nic.mac1609_4 TotalLostPackets 717
+scalar Network.V[89].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[89].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[89].nic.mac1609_4 TimesIntoBackoff 99
+scalar Network.V[89].nic.mac1609_4 SlotsBackoff 155
+scalar Network.V[89].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[89].nic.mac1609_4 totalBusyTime 6.526716
+scalar Network.V[89].veinsmobility startTime 268
+scalar Network.V[89].veinsmobility totalTime 32
+scalar Network.V[89].veinsmobility stopTime 300
+scalar Network.V[89].veinsmobility minSpeed 4.0015697824781
+scalar Network.V[89].veinsmobility maxSpeed 13.992051549789
+scalar Network.V[89].veinsmobility totalDistance 367.59980475139
+scalar Network.V[89].veinsmobility totalCO2Emission 92.019692858021
+scalar Network.V[90].appl "Duplicate Messages" 0
+scalar Network.V[90].appl "Original Messages" 0
+scalar Network.V[90].appl "Plist Message" 43
+scalar Network.V[90].appl "Full CRL Recieved Time" 0
+scalar Network.V[90].nic.phy80211p busyTime 0.20152827586206
+scalar Network.V[90].nic.mac1609_4 ReceivedUnicastPackets 43
+scalar Network.V[90].nic.mac1609_4 ReceivedBroadcasts 446
+scalar Network.V[90].nic.mac1609_4 SentPackets 73
+scalar Network.V[90].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[90].nic.mac1609_4 SNIRLostPackets 637
+scalar Network.V[90].nic.mac1609_4 RXTXLostPackets 9
+scalar Network.V[90].nic.mac1609_4 TotalLostPackets 646
+scalar Network.V[90].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[90].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[90].nic.mac1609_4 TimesIntoBackoff 100
+scalar Network.V[90].nic.mac1609_4 SlotsBackoff 155
+scalar Network.V[90].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[90].nic.mac1609_4 totalBusyTime 5.644665
+scalar Network.V[90].veinsmobility startTime 271
+scalar Network.V[90].veinsmobility totalTime 29
+scalar Network.V[90].veinsmobility stopTime 300
+scalar Network.V[90].veinsmobility minSpeed 4.3101937902846
+scalar Network.V[90].veinsmobility maxSpeed 13.994978454306
+scalar Network.V[90].veinsmobility totalDistance 337.04796914384
+scalar Network.V[90].veinsmobility totalCO2Emission 92.325485289257
+scalar Network.V[91].appl "Duplicate Messages" 0
+scalar Network.V[91].appl "Original Messages" 0
+scalar Network.V[91].appl "Plist Message" 38
+scalar Network.V[91].appl "Full CRL Recieved Time" 0
+scalar Network.V[91].nic.phy80211p busyTime 0.16741107692307
+scalar Network.V[91].nic.mac1609_4 ReceivedUnicastPackets 38
+scalar Network.V[91].nic.mac1609_4 ReceivedBroadcasts 359
+scalar Network.V[91].nic.mac1609_4 SentPackets 74
+scalar Network.V[91].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[91].nic.mac1609_4 SNIRLostPackets 506
+scalar Network.V[91].nic.mac1609_4 RXTXLostPackets 4
+scalar Network.V[91].nic.mac1609_4 TotalLostPackets 510
+scalar Network.V[91].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[91].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[91].nic.mac1609_4 TimesIntoBackoff 95
+scalar Network.V[91].nic.mac1609_4 SlotsBackoff 151
+scalar Network.V[91].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[91].nic.mac1609_4 totalBusyTime 4.29221
+scalar Network.V[91].veinsmobility startTime 274
+scalar Network.V[91].veinsmobility totalTime 26
+scalar Network.V[91].veinsmobility stopTime 300
+scalar Network.V[91].veinsmobility minSpeed 4.0334593472669
+scalar Network.V[91].veinsmobility maxSpeed 13.959311332325
+scalar Network.V[91].veinsmobility totalDistance 284.2648121853
+scalar Network.V[91].veinsmobility totalCO2Emission 80.913441344965
+scalar Network.V[92].appl "Duplicate Messages" 0
+scalar Network.V[92].appl "Original Messages" 0
+scalar Network.V[92].appl "Plist Message" 26
+scalar Network.V[92].appl "Full CRL Recieved Time" 0
+scalar Network.V[92].nic.phy80211p busyTime 0.17180834782608
+scalar Network.V[92].nic.mac1609_4 ReceivedUnicastPackets 26
+scalar Network.V[92].nic.mac1609_4 ReceivedBroadcasts 306
+scalar Network.V[92].nic.mac1609_4 SentPackets 52
+scalar Network.V[92].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[92].nic.mac1609_4 SNIRLostPackets 500
+scalar Network.V[92].nic.mac1609_4 RXTXLostPackets 4
+scalar Network.V[92].nic.mac1609_4 TotalLostPackets 504
+scalar Network.V[92].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[92].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[92].nic.mac1609_4 TimesIntoBackoff 60
+scalar Network.V[92].nic.mac1609_4 SlotsBackoff 88
+scalar Network.V[92].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[92].nic.mac1609_4 totalBusyTime 3.8853
+scalar Network.V[92].veinsmobility startTime 277
+scalar Network.V[92].veinsmobility totalTime 23
+scalar Network.V[92].veinsmobility stopTime 300
+scalar Network.V[92].veinsmobility minSpeed 3.8318498705856
+scalar Network.V[92].veinsmobility maxSpeed 13.973229011565
+scalar Network.V[92].veinsmobility totalDistance 253.24311151875
+scalar Network.V[92].veinsmobility totalCO2Emission 77.655961585233
+scalar Network.V[93].appl "Duplicate Messages" 0
+scalar Network.V[93].appl "Original Messages" 0
+scalar Network.V[93].appl "Plist Message" 40
+scalar Network.V[93].appl "Full CRL Recieved Time" 0
+scalar Network.V[93].nic.phy80211p busyTime 0.1516412
+scalar Network.V[93].nic.mac1609_4 ReceivedUnicastPackets 40
+scalar Network.V[93].nic.mac1609_4 ReceivedBroadcasts 264
+scalar Network.V[93].nic.mac1609_4 SentPackets 61
+scalar Network.V[93].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[93].nic.mac1609_4 SNIRLostPackets 366
+scalar Network.V[93].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[93].nic.mac1609_4 TotalLostPackets 366
+scalar Network.V[93].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[93].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[93].nic.mac1609_4 TimesIntoBackoff 76
+scalar Network.V[93].nic.mac1609_4 SlotsBackoff 117
+scalar Network.V[93].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[93].nic.mac1609_4 totalBusyTime 3.085661
+scalar Network.V[93].veinsmobility startTime 280
+scalar Network.V[93].veinsmobility totalTime 20
+scalar Network.V[93].veinsmobility stopTime 300
+scalar Network.V[93].veinsmobility minSpeed 4.0960880163999
+scalar Network.V[93].veinsmobility maxSpeed 13.994325766887
+scalar Network.V[93].veinsmobility totalDistance 226.73117144082
+scalar Network.V[93].veinsmobility totalCO2Emission 58.876763689696
+scalar Network.V[94].appl "Duplicate Messages" 0
+scalar Network.V[94].appl "Original Messages" 0
+scalar Network.V[94].appl "Plist Message" 45
+scalar Network.V[94].appl "Full CRL Recieved Time" 0
+scalar Network.V[94].nic.phy80211p busyTime 0.175216
+scalar Network.V[94].nic.mac1609_4 ReceivedUnicastPackets 45
+scalar Network.V[94].nic.mac1609_4 ReceivedBroadcasts 219
+scalar Network.V[94].nic.mac1609_4 SentPackets 62
+scalar Network.V[94].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[94].nic.mac1609_4 SNIRLostPackets 358
+scalar Network.V[94].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[94].nic.mac1609_4 TotalLostPackets 358
+scalar Network.V[94].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[94].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[94].nic.mac1609_4 TimesIntoBackoff 65
+scalar Network.V[94].nic.mac1609_4 SlotsBackoff 110
+scalar Network.V[94].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[94].nic.mac1609_4 totalBusyTime 3.020878
+scalar Network.V[94].veinsmobility startTime 283
+scalar Network.V[94].veinsmobility totalTime 17
+scalar Network.V[94].veinsmobility stopTime 300
+scalar Network.V[94].veinsmobility minSpeed 4.1678804038517
+scalar Network.V[94].veinsmobility maxSpeed 13.964783743245
+scalar Network.V[94].veinsmobility totalDistance 199.47390585522
+scalar Network.V[94].veinsmobility totalCO2Emission 53.246680092109
+scalar Network.V[95].appl "Duplicate Messages" 0
+scalar Network.V[95].appl "Original Messages" 0
+scalar Network.V[95].appl "Plist Message" 18
+scalar Network.V[95].appl "Full CRL Recieved Time" 0
+scalar Network.V[95].nic.phy80211p busyTime 0.19380971428571
+scalar Network.V[95].nic.mac1609_4 ReceivedUnicastPackets 18
+scalar Network.V[95].nic.mac1609_4 ReceivedBroadcasts 180
+scalar Network.V[95].nic.mac1609_4 SentPackets 36
+scalar Network.V[95].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[95].nic.mac1609_4 SNIRLostPackets 337
+scalar Network.V[95].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[95].nic.mac1609_4 TotalLostPackets 337
+scalar Network.V[95].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[95].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[95].nic.mac1609_4 TimesIntoBackoff 36
+scalar Network.V[95].nic.mac1609_4 SlotsBackoff 58
+scalar Network.V[95].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[95].nic.mac1609_4 totalBusyTime 2.655932
+scalar Network.V[95].veinsmobility startTime 286
+scalar Network.V[95].veinsmobility totalTime 14
+scalar Network.V[95].veinsmobility stopTime 300
+scalar Network.V[95].veinsmobility minSpeed 4.019737268876
+scalar Network.V[95].veinsmobility maxSpeed 13.995758571147
+scalar Network.V[95].veinsmobility totalDistance 158.65375432649
+scalar Network.V[95].veinsmobility totalCO2Emission 48.625399976663
+scalar Network.V[96].appl "Duplicate Messages" 0
+scalar Network.V[96].appl "Original Messages" 0
+scalar Network.V[96].appl "Plist Message" 33
+scalar Network.V[96].appl "Full CRL Recieved Time" 0
+scalar Network.V[96].nic.phy80211p busyTime 0.19562181818182
+scalar Network.V[96].nic.mac1609_4 ReceivedUnicastPackets 33
+scalar Network.V[96].nic.mac1609_4 ReceivedBroadcasts 149
+scalar Network.V[96].nic.mac1609_4 SentPackets 47
+scalar Network.V[96].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[96].nic.mac1609_4 SNIRLostPackets 303
+scalar Network.V[96].nic.mac1609_4 RXTXLostPackets 3
+scalar Network.V[96].nic.mac1609_4 TotalLostPackets 306
+scalar Network.V[96].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[96].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[96].nic.mac1609_4 TimesIntoBackoff 49
+scalar Network.V[96].nic.mac1609_4 SlotsBackoff 79
+scalar Network.V[96].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[96].nic.mac1609_4 totalBusyTime 2.139527
+scalar Network.V[96].veinsmobility startTime 289
+scalar Network.V[96].veinsmobility totalTime 11
+scalar Network.V[96].veinsmobility stopTime 300
+scalar Network.V[96].veinsmobility minSpeed 3.8388518026201
+scalar Network.V[96].veinsmobility maxSpeed 13.958123562497
+scalar Network.V[96].veinsmobility totalDistance 115.61907861853
+scalar Network.V[96].veinsmobility totalCO2Emission 42.161767083495
+scalar Network.V[97].appl "Duplicate Messages" 0
+scalar Network.V[97].appl "Original Messages" 0
+scalar Network.V[97].appl "Plist Message" 8
+scalar Network.V[97].appl "Full CRL Recieved Time" 0
+scalar Network.V[97].nic.phy80211p busyTime 0.202748
+scalar Network.V[97].nic.mac1609_4 ReceivedUnicastPackets 8
+scalar Network.V[97].nic.mac1609_4 ReceivedBroadcasts 114
+scalar Network.V[97].nic.mac1609_4 SentPackets 16
+scalar Network.V[97].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[97].nic.mac1609_4 SNIRLostPackets 245
+scalar Network.V[97].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[97].nic.mac1609_4 TotalLostPackets 245
+scalar Network.V[97].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[97].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[97].nic.mac1609_4 TimesIntoBackoff 18
+scalar Network.V[97].nic.mac1609_4 SlotsBackoff 20
+scalar Network.V[97].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[97].nic.mac1609_4 totalBusyTime 1.569832
+scalar Network.V[97].veinsmobility startTime 292
+scalar Network.V[97].veinsmobility totalTime 8
+scalar Network.V[97].veinsmobility stopTime 300
+scalar Network.V[97].veinsmobility minSpeed 4.1988672093417
+scalar Network.V[97].veinsmobility maxSpeed 13.973666138183
+scalar Network.V[97].veinsmobility totalDistance 75.916529038577
+scalar Network.V[97].veinsmobility totalCO2Emission 36.061474020251
+scalar Network.V[98].appl "Duplicate Messages" 0
+scalar Network.V[98].appl "Original Messages" 0
+scalar Network.V[98].appl "Plist Message" 5
+scalar Network.V[98].appl "Full CRL Recieved Time" 0
+scalar Network.V[98].nic.phy80211p busyTime 0.1870896
+scalar Network.V[98].nic.mac1609_4 ReceivedUnicastPackets 5
+scalar Network.V[98].nic.mac1609_4 ReceivedBroadcasts 75
+scalar Network.V[98].nic.mac1609_4 SentPackets 10
+scalar Network.V[98].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[98].nic.mac1609_4 SNIRLostPackets 139
+scalar Network.V[98].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[98].nic.mac1609_4 TotalLostPackets 139
+scalar Network.V[98].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[98].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[98].nic.mac1609_4 TimesIntoBackoff 11
+scalar Network.V[98].nic.mac1609_4 SlotsBackoff 18
+scalar Network.V[98].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[98].nic.mac1609_4 totalBusyTime 0.90637
+scalar Network.V[98].veinsmobility startTime 295
+scalar Network.V[98].veinsmobility totalTime 5
+scalar Network.V[98].veinsmobility stopTime 300
+scalar Network.V[98].veinsmobility minSpeed 4.1315341364683
+scalar Network.V[98].veinsmobility maxSpeed 11.841953389153
+scalar Network.V[98].veinsmobility totalDistance 35.446197778958
+scalar Network.V[98].veinsmobility totalCO2Emission 23.120884462694
+scalar Network.V[99].appl "Duplicate Messages" 0
+scalar Network.V[99].appl "Original Messages" 0
+scalar Network.V[99].appl "Plist Message" 1
+scalar Network.V[99].appl "Full CRL Recieved Time" 0
+scalar Network.V[99].nic.phy80211p busyTime 0.17226
+scalar Network.V[99].nic.mac1609_4 ReceivedUnicastPackets 1
+scalar Network.V[99].nic.mac1609_4 ReceivedBroadcasts 27
+scalar Network.V[99].nic.mac1609_4 SentPackets 3
+scalar Network.V[99].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.V[99].nic.mac1609_4 SNIRLostPackets 50
+scalar Network.V[99].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.V[99].nic.mac1609_4 TotalLostPackets 50
+scalar Network.V[99].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.V[99].nic.mac1609_4 TooLittleTime 0
+scalar Network.V[99].nic.mac1609_4 TimesIntoBackoff 5
+scalar Network.V[99].nic.mac1609_4 SlotsBackoff 11
+scalar Network.V[99].nic.mac1609_4 NumInternalContention 0
+scalar Network.V[99].nic.mac1609_4 totalBusyTime 0.331643
+scalar Network.V[99].veinsmobility startTime 298
+scalar Network.V[99].veinsmobility totalTime 2
+scalar Network.V[99].veinsmobility stopTime 300
+scalar Network.V[99].veinsmobility minSpeed 3.8684168658379
+scalar Network.V[99].veinsmobility maxSpeed 6.0924802270016
+scalar Network.V[99].veinsmobility totalDistance 8.0808582088914
+scalar Network.V[99].veinsmobility totalCO2Emission 4.6903570008639
+scalar Network.manager roiArea 0
+scalar Network.CA[0].nic.phy80211p busyTime 0
+scalar Network.CA[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar Network.CA[0].nic.mac1609_4 ReceivedBroadcasts 0
+scalar Network.CA[0].nic.mac1609_4 SentPackets 0
+scalar Network.CA[0].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.CA[0].nic.mac1609_4 SNIRLostPackets 0
+scalar Network.CA[0].nic.mac1609_4 RXTXLostPackets 0
+scalar Network.CA[0].nic.mac1609_4 TotalLostPackets 0
+scalar Network.CA[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.CA[0].nic.mac1609_4 TooLittleTime 0
+scalar Network.CA[0].nic.mac1609_4 TimesIntoBackoff 0
+scalar Network.CA[0].nic.mac1609_4 SlotsBackoff 0
+scalar Network.CA[0].nic.mac1609_4 NumInternalContention 0
+scalar Network.CA[0].nic.mac1609_4 totalBusyTime 0
+scalar Network.RSU[0].nic.phy80211p busyTime 0.25873642666677
+scalar Network.RSU[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar Network.RSU[0].nic.mac1609_4 ReceivedBroadcasts 5014
+scalar Network.RSU[0].nic.mac1609_4 SentPackets 300
+scalar Network.RSU[0].nic.mac1609_4 SentAcknowledgements 0
+scalar Network.RSU[0].nic.mac1609_4 SNIRLostPackets 7619
+scalar Network.RSU[0].nic.mac1609_4 RXTXLostPackets 27
+scalar Network.RSU[0].nic.mac1609_4 TotalLostPackets 7646
+scalar Network.RSU[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar Network.RSU[0].nic.mac1609_4 TooLittleTime 0
+scalar Network.RSU[0].nic.mac1609_4 TimesIntoBackoff 306
+scalar Network.RSU[0].nic.mac1609_4 SlotsBackoff 467
+scalar Network.RSU[0].nic.mac1609_4 NumInternalContention 0
+scalar Network.RSU[0].nic.mac1609_4 totalBusyTime 73.769892
+
