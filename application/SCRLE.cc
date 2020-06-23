@@ -93,7 +93,7 @@ void SCRLE::handleMessage(cMessage *msg)
             //We will send our own Plist to the selected beacon
             if(selectedBeacon)//checking if selected beacon is there or not
             {
-                if(getStatus()!=4)//if we have all the CRL pieces we don't need to send the PList
+                if(getStatus()!=5)//if we have all the CRL pieces we don't need to send the PList
                 Send_CRL_List_Msg(-1,selectedBeacon->getSrcAddr());//-1 indicates we are first sending Plist message
             }
         }
@@ -162,7 +162,7 @@ void SCRLE::recievePlist(cMessage* msg)
     EV<<"Sender: "<<pkt->getSender()<<endl;
     if(ourSerial != pkt->getSerial())//we have not sent our Plist to this vehicle
     {
-        if(getStatus()!=0 || getStatus()!=4) //checking that we have some CRL pieces to send
+        if(getStatus()!=0 || getStatus()!=5) //checking that we have some CRL pieces to send
                                              //if we have all the pieces then we don't need to send Plist
         Send_CRL_List_Msg(pkt->getSerial(),pkt->getSender());
     }
@@ -194,8 +194,10 @@ int SCRLE::getStatus()
         return 2;
     else if(pieces_no< ((totalPieces*3)/4)) //less than 75% of total pieces
         return 3;
-    else
+    else if(pieces_no< totalPieces)
         return 4;
+    else
+        return 5;
 }
 void SCRLE::sendBeacon(veins::LAddress::L2Type RecID, bool periodic)
 {
